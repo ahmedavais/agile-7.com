@@ -3,6 +3,17 @@
 Ahmed Avais's site for Agile-7. It used to be a WordPress blog and services site; this is the rebuild.
 Right now it is only the foundation: one placeholder page, deployed.
 
+## Purpose
+
+agile-7.com shows engineering leaders what Ahmed has done and can do: build healthy teams, make change stick, and work well with AI. People who hear about him can see the proof and reach out for consulting, speaking or 1:1 leadership development.
+
+- Proof over pitch. Work has always come through people who knew Ahmed, so the site backs up a name someone already heard. Show real work and outcomes; avoid service menus and modest labels like "facilitator".
+- Engineering leaders come first. Agile coaches and change-minded people are welcome readers but not the target.
+- One ask on every page: "let's talk". It covers consulting, speaking and other conversations without naming a specific path.
+- Topics: team health, change management, AI-era teamwork, executive development, agile games, XP and TDD. Scrum Master work is out of scope.
+- ahmedavais.com gets a quiet link, not a feature.
+- The 2020 blog posts stay, with their old WordPress URLs redirected. Everything else from the old site is raw material, not something to preserve.
+
 ## Stack
 
 - Astro 7, fully static output (`dist/`).
@@ -24,6 +35,5 @@ Right now it is only the foundation: one placeholder page, deployed.
 ## Conventions
 
 - Pages work at 375px wide and respect `prefers-color-scheme`.
-- Old WordPress URLs (e.g. `/the-power-of-inquiry/`) redirect to their new home once that content is migrated.
 - Never commit secrets. Cloudflare credentials live only in GitHub Actions secrets.
 - After a visual change, check it in the browser at desktop and mobile widths.
