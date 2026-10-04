@@ -14,11 +14,19 @@ I used Mentimeter as the primary tool and had set the expectations that we will 
 
 I started out with a warm-up question in the vein of gratitude. Meant to be light-hearted and as you can see was taken lightheartedly.
 
+![Word cloud of answers to “In one word, who or what are you grateful for?”, led by family, health and coffee](./images/gratitude-warm-up.jpg)
+
 After that I had two slides to set the stage for the exercise and the prompt. Reminding them to practice the art of noticing positive attributes in others and then presenting them the following prompt:
 
 > What is a positive attribute you would use to describe your team mate? e.g. funny, approachable, honest, radically curious etc
 
 I would ask the person who’s name would be on the slide to be the receiver and everyone else be the senders. I asked them to write the answers and not hit submit until one-at-a-time they said what they noticed in their colleague (multiple attributes allowed.) And we created poems for each one. And here are some examples:
+
+![Word cloud poem for one team mate, led by funny, welcoming and knowledgeable](./images/gratitude-poem-1.jpg)
+
+![Word cloud poem for another team mate, led by humble, curious and creative](./images/gratitude-poem-2.jpg)
+
+![Word cloud poem for a third team mate, led by knowledgeable, intelligent and sincere](./images/gratitude-poem-3.jpg)
 
 The feedback I received from the session was immensely validating that gratitude is an energy. When you give it in a structured or unstructured format, you build energy for yourself to use.
 
