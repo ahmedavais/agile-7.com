@@ -20,7 +20,7 @@ After that I had two slides to set the stage for the exercise and the prompt. Re
 
 > What is a positive attribute you would use to describe your team mate? e.g. funny, approachable, honest, radically curious etc
 
-I would ask the person who’s name would be on the slide to be the receiver and everyone else be the senders. I asked them to write the answers and not hit submit until one-at-a-time they said what they noticed in their colleague (multiple attributes allowed.) And we created poems for each one. And here are some examples:
+I would ask the person whose name would be on the slide to be the receiver and everyone else be the senders. I asked them to write the answers and not hit submit until one-at-a-time they said what they noticed in their colleague (multiple attributes allowed.) And we created poems for each one. And here are some examples:
 
 ![Word cloud poem for one team mate, led by funny, welcoming and knowledgeable](./images/gratitude-poem-1.jpg)
 
@@ -30,6 +30,6 @@ I would ask the person who’s name would be on the slide to be the receiver and
 
 The feedback I received from the session was immensely validating that gratitude is an energy. When you give it in a structured or unstructured format, you build energy for yourself to use.
 
-I had scheduled this session after the team got to each other for a month, and I had it scheduled on the last day of the week and late in the day. And you’d be forgiven, if you met them and thought the high energy is coming from a team that has just started their week and are ready to take on the world.
+I had scheduled this session after the team got to know each other for a month, and I had it scheduled on the last day of the week and late in the day. And you’d be forgiven, if you met them and thought the high energy is coming from a team that has just started their week and are ready to take on the world.
 
 And I appreciate you for taking the time to read this post. And I encourage you to build more positivity and gratitude in your places of work, home, and communities!
