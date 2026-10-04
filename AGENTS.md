@@ -24,13 +24,15 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 ## Commands
 
 - `npm run dev`: dev server at http://localhost:4321. Agents: `npx astro dev --background`, stop with `npx astro dev stop`.
-- `npm run verify`: typecheck + build. Run before calling any change done; CI runs the same.
+- `npm run verify`: typecheck + tests + build. Run before calling any change done; CI runs the same.
 - `npm run preview`: build and serve through wrangler, the same way production serves it.
 
 ## Layout
 
 - `docs/plan.md`: the pages planned for the first version, the steps to build them, and open questions.
 - `src/pages/`: one file per route.
+- `src/content/writing/<slug>.md`: one per post, served at `/writing/<slug>`. Frontmatter schema in `src/content.config.ts`. The 2020 posts keep their WordPress slugs.
+- `src/lib/`: pure logic, with `*.test.ts` next to it (vitest). Pages only render.
 - `src/layouts/Base.astro`: shared shell for every page: head, header, footer.
 - `src/components/`: pieces of the shell. `SiteFooter` carries the "let's talk" ask that ends every page.
 - `src/styles/global.css`: design tokens and shared styles.

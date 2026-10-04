@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PublishedOn from '../../components/PublishedOn.astro';
+import { newestFirst } from '../../lib/writing';
+
+const posts = newestFirst(await getCollection('writing'));
+---
+
+<Base title="Writing" description="Ahmed Avais on teams, change and working with AI.">
+  <h1>Writing</h1>
+  <ol class="reading-list">
+    {posts.map((post) => (
+      <li>
+        <a href={`/writing/${post.id}`}>
+          <h2>{post.data.title}</h2>
+        </a>
+        <PublishedOn date={post.data.date} />
+        <p>{post.data.summary}</p>
+      </li>
+    ))}
+  </ol>
+</Base>
