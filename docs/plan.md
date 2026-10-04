@@ -23,7 +23,7 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 ## Steps
 
 - [x] Choose a design direction
-- [ ] Shared shell: navigation, footer, the "let's talk" ask
+- [x] Shared shell: navigation, footer, the "let's talk" ask
 - [ ] Writing list and post pages
 - [ ] Move the four 2020 posts over
 - [ ] Redirect their old WordPress URLs to `/writing/<slug>`

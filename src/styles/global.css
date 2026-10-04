@@ -1,16 +1,23 @@
 :root {
-  --bg: #ffffff;
-  --fg: #1a1a1a;
-  --muted: #666666;
+  --bg: #fbfaf7;
+  --fg: #1f1d1a;
+  --muted: #57524a;
+  --line: #e5e1d8;
+  --accent: #2f6b55;
+  --accent-fg: #ffffff;
+  --diagram-bg: #f1eee6;
   --max: 720px;
-  --font: system-ui, -apple-system, 'Segoe UI', sans-serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #121212;
-    --fg: #ededed;
-    --muted: #a0a0a0;
+    --bg: #161513;
+    --fg: #eeeae2;
+    --muted: #aaa397;
+    --line: #2e2b27;
+    --accent: #7fc4a7;
+    --accent-fg: #10201a;
+    --diagram-bg: #201e1b;
     color-scheme: dark;
   }
 }
@@ -21,12 +28,54 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: var(--font);
-  font-size: 17px;
-  line-height: 1.6;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.65;
 }
 a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-serif); line-height: 1.15; }
+h1 { font-weight: 400; font-size: clamp(32px, 5vw, 46px); letter-spacing: -0.01em; margin: 64px 0 20px; }
+h2 { font-weight: 500; font-size: 28px; margin: 40px 0 8px; }
+p { color: var(--muted); }
+code, pre { font-family: var(--font-mono); font-size: 0.85em; }
 
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
-.site-header { padding: 24px 0; }
-.site-name { font-weight: 700; text-decoration: none; }
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 20px;
+  padding: 28px 0 0;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+.site-header a { text-decoration: none; }
+.site-name { font-weight: 500; }
+.site-nav { display: flex; gap: 20px; }
+.site-nav a:hover, .site-name:hover { color: var(--accent); }
+
+.site-footer { margin-top: 80px; border-top: 1px solid var(--line); padding: 8px 0 40px; }
+.ask h2 { margin-top: 28px; }
+.ask-button {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--accent-fg);
+  background: var(--accent);
+  padding: 10px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.elsewhere {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 48px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+.elsewhere a { text-decoration: none; }
+.elsewhere a:hover { color: var(--accent); }

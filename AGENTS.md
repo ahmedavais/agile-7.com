@@ -31,7 +31,10 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 
 - `docs/plan.md`: the pages planned for the first version, the steps to build them, and open questions.
 - `src/pages/`: one file per route.
-- `src/layouts/Base.astro`, `src/styles/global.css`: shared shell and design tokens.
+- `src/layouts/Base.astro`: shared shell for every page: head, header, footer.
+- `src/components/`: pieces of the shell. `SiteFooter` carries the "let's talk" ask that ends every page.
+- `src/styles/global.css`: design tokens and shared styles.
+- Fonts are self-hosted through Astro's font support (`fonts` in `astro.config.mjs`). Don't load fonts from third-party servers.
 
 ## Conventions
 
