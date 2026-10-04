@@ -29,6 +29,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 
 ## Layout
 
+- `docs/plan.md`: the pages planned for the first version, the steps to build them, and open questions.
 - `src/pages/`: one file per route.
 - `src/layouts/Base.astro`, `src/styles/global.css`: shared shell and design tokens.
 
