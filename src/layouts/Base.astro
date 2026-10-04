@@ -1,4 +1,7 @@
 ---
+import { Font } from 'astro:assets';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -6,7 +9,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Agile-7: Ahmed Avais on agility, coaching and change.' } = Astro.props;
+const { title, description = 'Ahmed Avais helps engineering leaders build healthy teams, make change stick, and work well with AI.' } = Astro.props;
 const fullTitle = title ? `${title} · Agile-7` : 'Agile-7';
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -25,15 +28,17 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
+    <Font cssVariable="--font-serif" preload />
+    <Font cssVariable="--font-sans" preload />
+    <Font cssVariable="--font-mono" />
   </head>
   <body>
     <div class="wrap">
-      <header class="site-header">
-        <a class="site-name" href="/">Agile-7</a>
-      </header>
+      <SiteHeader />
       <main>
         <slot />
       </main>
+      <SiteFooter />
     </div>
   </body>
 </html>
