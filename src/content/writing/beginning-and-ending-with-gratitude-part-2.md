@@ -4,23 +4,21 @@ summary: I expected Glenda Eoyang’s “Poems” exercise to fall flat over Zoo
 date: 2020-07-24
 ---
 
-Continuing on the ideas I shared in a [previous blog post](/writing/beginning-and-ending-with-gratitude), I wanted to share a virtual version of the practice that Dr. Glenda Eoyang calls “Poems.” An exercise to express gratitude toward your team mates. In the past, I’ve done this practice with senior leaders and natural working teams, with outstanding success. And I wondered if being in proximity makes it easy and more impactful. Taking turns silently reflecting on positive attributes of one person, writing them down on post-its, and handing them as if gifts to your colleague… I felt I would miss a lot.
+Continuing the ideas from my [previous post](/writing/beginning-and-ending-with-gratitude), I want to share a virtual version of a practice Dr. Glenda Eoyang calls “Poems,” an exercise for expressing gratitude toward your teammates. I had done it with senior leaders and natural working teams with outstanding success, but always in the same room. People take turns silently reflecting on one person’s positive attributes, write them on sticky notes and hand them over like gifts, and I wondered how much of that would be lost if we couldn’t be together.
 
-I finally brought up the courage to do this exercise in a Zoom world. And boy, was I proven wrong. It was still easy; it was still impactful, and the energy was still going off the charts.
+When I finally found the courage to run it in a Zoom world, boy, was I proven wrong! It was still easy, still impactful, and the energy still went off the charts. Here’s how I did it, so you can try it too.
 
-I’m sharing the experience and practical steps to inspire you and make it easy for you to try.
+I used Mentimeter as the main tool and asked everyone to bring a smartphone, tablet or second device for the polls. They knew coming in that this would be a special retrospective and team-building session.
 
-I used Mentimeter as the primary tool and had set the expectations that we will use a smartphone, tablet, or secondary device for polling. And they knew coming in that we will do a special retrospective and team building exercise.
-
-I started out with a warm-up question in the vein of gratitude. Meant to be light-hearted and as you can see was taken lightheartedly.
+I opened with a light-hearted warm-up question about gratitude, and as you can see, they took it lightheartedly.
 
 ![Word cloud of answers to “In one word, who or what are you grateful for?”, led by family, health and coffee](./images/gratitude-warm-up.jpg)
 
-After that I had two slides to set the stage for the exercise and the prompt. Reminding them to practice the art of noticing positive attributes in others and then presenting them the following prompt:
+Then I used two slides to set the stage, reminding everyone to practice the art of noticing positive attributes in others, before showing the prompt:
 
-> What is a positive attribute you would use to describe your team mate? e.g. funny, approachable, honest, radically curious etc
+> What is a positive attribute you would use to describe your teammate? For example: funny, approachable, honest, radically curious.
 
-I would ask the person whose name would be on the slide to be the receiver and everyone else be the senders. I asked them to write the answers and not hit submit until one-at-a-time they said what they noticed in their colleague (multiple attributes allowed.) And we created poems for each one. And here are some examples:
+In each round, the person named on the slide was the receiver and everyone else was a sender. Senders typed their answers but held off on submitting until, one at a time, each of them said out loud what they noticed in their colleague (more than one attribute was welcome). Together we created a poem for each person. Here are a few of them:
 
 ![Word cloud poem for one team mate, led by funny, welcoming and knowledgeable](./images/gratitude-poem-1.jpg)
 
@@ -28,8 +26,8 @@ I would ask the person whose name would be on the slide to be the receiver and e
 
 ![Word cloud poem for a third team mate, led by knowledgeable, intelligent and sincere](./images/gratitude-poem-3.jpg)
 
-The feedback I received from the session was immensely validating that gratitude is an energy. When you give it in a structured or unstructured format, you build energy for yourself to use.
+The feedback from the session confirmed what I had come to believe: gratitude is an energy, and whether you give it in a structured or unstructured way, you build energy for yourself too.
 
-I had scheduled this session after the team got to know each other for a month, and I had it scheduled on the last day of the week and late in the day. And you’d be forgiven, if you met them and thought the high energy is coming from a team that has just started their week and are ready to take on the world.
+I scheduled the session after the team had spent a month getting to know each other, on the last day of the week and late in the day. If you had met them afterward, you’d be forgiven for thinking they were a team just starting their week and ready to take on the world.
 
-And I appreciate you for taking the time to read this post. And I encourage you to build more positivity and gratitude in your places of work, home, and communities!
+Thank you for taking the time to read this post, and I encourage you to build more positivity and gratitude at work, at home and in your communities!
