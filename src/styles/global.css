@@ -97,3 +97,15 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
 .prose a { color: var(--accent); }
 .prose blockquote { margin: 24px 0; padding-left: 20px; border-left: 3px solid var(--accent); font-family: var(--font-serif); font-size: 1.15em; }
 .prose img { max-width: 100%; height: auto; }
+
+.flow-diagram { margin: 32px 0; padding: 20px; background: var(--diagram-bg); border-left: 3px solid var(--accent); }
+.flow-diagram ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 28px; }
+.flow-diagram li { position: relative; display: flex; flex-direction: column; font-family: var(--font-mono); font-size: 14px; line-height: 1.4; }
+.flow-diagram li + li::before { content: '↓' / ''; position: absolute; top: -26px; left: 0; color: var(--accent); }
+.flow-label { color: var(--accent); font-weight: 500; }
+.flow-detail { color: var(--muted); font-size: 13px; }
+@media (min-width: 640px) {
+  .flow-diagram ol { flex-direction: row; gap: 40px; }
+  .flow-diagram li { flex: 1; }
+  .flow-diagram li + li::before { content: '→' / ''; top: 0; left: -28px; }
+}

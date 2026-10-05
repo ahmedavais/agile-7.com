@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import FlowDiagram from '../components/FlowDiagram.astro';
+
+const systemsJourney = [
+  { label: 'machines', detail: 'networks, fare systems' },
+  { label: 'teams', detail: 'XP, coaching, HSD' },
+  { label: 'teams + AI', detail: 'specs, harness, safety net' },
+];
+---
+
+<Base title="About" description="Ahmed Avais has spent 25 years learning how systems behave: first machines, then teams, and now teams working with AI.">
+  <article class="prose">
+    <h1>About</h1>
+    <p>I'm Ahmed Avais. For 25 years I've worked on one question: how do systems behave, and how do you help them change? The systems kept getting more human.</p>
+
+    <FlowDiagram title="From machines to teams to teams working with AI" steps={systemsJourney} />
+
+    <h2>Machines</h2>
+    <p>I started in Lahore in 2000 by launching an internet service provider without knowing how. We had six months. At the launch expo the other providers handed out brochures, and we let people get online at our stand. Within a year I was helping run a network operations centre for SITA, keeping data flowing for more than 65 clients, from airlines to the United Nations.</p>
+    <p>Then I moved to Chicago and spent twelve years as a systems engineer at the Chicago Transit Authority, on the fare systems behind $70M a year in card revenue. That's where I found the work of Deming and Goldratt. Find the constraint, fix the flow, and the whole system improves. I still think that way.</p>
+
+    <h2>Teams</h2>
+    <p>In 2008 I started Agile 7 and launched more than 15 websites and web apps for small businesses and startups. Extreme Programming and test-driven development changed how I saw software work. The code got better when the team's habits got better.</p>
+    <p>That pulled me into coaching. Over the next decade I worked with engineering and product leaders at Capital One, UnitedHealth Group, Fidelity Investments and several healthcare organisations, from single teams up to 200+ teams at a time. Systems thinking helped, but it treats organisations as closed systems, and people don't behave that way. Human Systems Dynamics gave me a way to work with open systems, where you can't predict the outcome but you can shift the patterns.</p>
+
+    <h2>Teams and AI</h2>
+    <p>In 2024 I helped a federal agency take a secure LLM solution from concept to production. Today I'm a Senior Engineering Manager, and my teams build with AI every day: spec-driven development, skills and an agent harness, and a safety net that catches what generated code gets wrong. The constraint has moved from writing code to reviewing it, and the human side of that change is still hard.</p>
+    <p>My teams do the work. My part is to set up the conditions: the practices, the feedback loops and the trust that let them do it well.</p>
+
+    <h2>Credentials</h2>
+    <p>Certified Enterprise Coach (CEC), ICF Professional Certified Coach (PCC), Human Systems Dynamics Professional, and licensed facilitator of the Agile Fluency™ Diagnostic. I contributed to and edited <cite>The Leader's Guide for Social Responsibility</cite>.</p>
+
+    <p>The full timeline is on <a href="https://www.linkedin.com/in/ahmedavais">LinkedIn</a>. I also make small interactive things at <a href="https://ahmedavais.com">ahmedavais.com</a>.</p>
+  </article>
+</Base>
