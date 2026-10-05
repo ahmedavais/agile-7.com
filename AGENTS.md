@@ -11,6 +11,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - Engineering leaders come first. Agile coaches and change-minded people are welcome readers but not the target.
 - One ask on every page: "let's talk". It covers consulting, speaking and other conversations without naming a specific path.
 - Topics: team health, change management, AI-era teamwork, executive development, agile games, XP and TDD. Scrum Master work is out of scope.
+- Never name Ahmed's current employer. Describe current work generically ("my teams"); the employer is not a hook for consulting.
 - ahmedavais.com gets a quiet link, not a feature.
 - The 2020 blog posts stay, with their old WordPress URLs redirected. Everything else from the old site is raw material, not something to preserve.
 
