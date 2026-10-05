@@ -1,6 +1,6 @@
 ---
 title: Pattern Spotting Super Powers
-summary: A team of managers who couldn’t get along, and the one question that showed what was really dividing them.
+summary: When a team of managers couldn’t get along, one question in a workshop showed what was really dividing them.
 date: 2020-05-04
 ---
 
