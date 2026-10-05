@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+
+const talks = [
+  { title: 'Using Human Systems Dynamics', venue: 'Ignite-Agility Meetup', year: 2021 },
+  { title: 'Introduction to the Agile Fluency Suite', venue: 'Agile 757', year: 2021 },
+  { title: 'Using the Harada Method to Develop People', venue: 'TriAgile, Raleigh', year: 2019 },
+  { title: 'Custom-Tailored Agility', venue: 'Agile Leadership Network RTP', year: 2019 },
+  { title: 'Deliberate Practice: Myth, Magic, and Mindfulness', venue: 'Agile Cincy', year: 2018 },
+  { title: 'Design Thinking in Practice', venue: 'Fitch Ratings', year: 2018 },
+];
+---
+
+<Base title="Let's talk" description="Talk with Ahmed Avais about AI in engineering teams, lasting change, leadership coaching, workshops and talks." ask={false}>
+  <article class="prose">
+    <h1>Let's talk</h1>
+    <p>If you lead engineering teams and something here sounds familiar, I'd like to hear about it. Most of my work has started with a conversation, so that's the place to begin.</p>
+
+    <h2>What we could talk about</h2>
+    <h3>Your teams and AI</h3>
+    <p>Bringing AI into engineering without losing quality or people: specs, harnesses, review safety nets, and the human side of the change.</p>
+    <h3>Change that sticks</h3>
+    <p>Shifting the patterns in an organisation so new ways of working last, whether that's one team or two hundred.</p>
+    <h3>1:1 leadership development</h3>
+    <p>Coaching for engineering leaders. I'm an ICF Professional Certified Coach.</p>
+    <h3>Workshops and talks</h3>
+    <p>Hands-on sessions for teams and leaders, including agile games such as the Agile Fluency™ Game.</p>
+
+    <h2>Talks I've given</h2>
+    <ul class="talks">
+      {talks.map((talk) => (
+        <li><cite>{talk.title}</cite>, {talk.venue}, {talk.year}</li>
+      ))}
+    </ul>
+
+    <h2>Get in touch</h2>
+    <p>Email me at <a href="mailto:ahmed@agile-7.com">ahmed@agile-7.com</a>. Tell me a little about your teams and what's on your mind. You can also find me on <a href="https://www.linkedin.com/in/ahmedavais">LinkedIn</a>.</p>
+  </article>
+</Base>
