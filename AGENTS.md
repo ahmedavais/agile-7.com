@@ -39,6 +39,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - `src/layouts/Base.astro`: shared shell for every page: head, header, footer.
 - `src/components/`: pieces of the shell. `SiteFooter` carries the "let's talk" ask that ends every page except Let's talk itself (`ask={false}` on `Base`). `FlowDiagram` draws a left-to-right flow that stacks on phones; use it for diagrams instead of ASCII or images. `SystemsJourney` is the machines → teams → teams + AI diagram shared by Home and About.
 - `src/styles/global.css`: design tokens and shared styles.
+- `public/share-image.png`: the link-preview card every page uses (`og:image`). Its source is `design/share-image.html`; after editing it, re-render with Chrome headless: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --force-device-scale-factor=1 --virtual-time-budget=5000 --window-size=1200,630 --screenshot="$PWD/public/share-image.png" "file://$PWD/design/share-image.html"`.
 - Fonts are self-hosted through Astro's font support (`fonts` in `astro.config.mjs`). Don't load fonts from third-party servers.
 
 ## Conventions

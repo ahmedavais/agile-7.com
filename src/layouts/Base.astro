@@ -13,6 +13,7 @@ interface Props {
 const { title, ask = true, description = 'Ahmed Avais helps engineering leaders build healthy teams, make change stick and lead well in complex systems.' } = Astro.props;
 const fullTitle = title ? `${title} · Agile-7` : 'Agile-7';
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const shareImage = new URL('/share-image.png', Astro.site);
 ---
 
 <!doctype html>
@@ -29,6 +30,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="agile-7: Ahmed Avais on learning how systems behave, from machines to teams to teams working with AI" />
+    <meta name="twitter:card" content="summary_large_image" />
     <Font cssVariable="--font-serif" preload />
     <Font cssVariable="--font-sans" preload />
     <Font cssVariable="--font-mono" />
