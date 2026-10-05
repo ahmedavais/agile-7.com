@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400&family=Inter:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+  :root { --bg: #fbfaf7; --fg: #1f1d1a; --muted: #57524a; --line: #e5e1d8; --accent: #2f6b55; --diagram-bg: #f1eee6; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { background: var(--bg); color: var(--fg); font-family: Inter, sans-serif; padding: 64px 80px; display: flex; flex-direction: column; }
+  .name { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 28px; color: var(--accent); }
+  h1 { font-family: Newsreader, serif; font-weight: 400; font-size: 58px; line-height: 1.12; letter-spacing: -0.01em; margin-top: 40px; max-width: 1000px; }
+  .flow { display: flex; gap: 0; margin-top: auto; background: var(--diagram-bg); border-left: 5px solid var(--accent); padding: 22px 28px; font-family: 'IBM Plex Mono', monospace; }
+  .step { flex: 1; }
+  .label { color: var(--accent); font-weight: 500; font-size: 26px; }
+  .detail { color: var(--muted); font-size: 19px; margin-top: 4px; white-space: nowrap; }
+  .arrow { color: var(--accent); font-size: 26px; padding: 0 28px; }
+  .byline { display: flex; justify-content: space-between; margin-top: 32px; font-size: 24px; color: var(--muted); }
+  .byline strong { color: var(--fg); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="name">agile-7</div>
+  <h1>Learning how systems behave, from machines to teams to teams working with AI.</h1>
+  <div class="flow">
+    <div class="step"><div class="label">machines</div><div class="detail">networks, infrastructure</div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="label">teams</div><div class="detail">XP, coaching, HSD</div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="label">teams + AI</div><div class="detail">specs, harness, safety net</div></div>
+  </div>
+  <div class="byline"><span><strong>Ahmed Avais</strong></span><span>agile-7.com</span></div>
+</body>
+</html>
