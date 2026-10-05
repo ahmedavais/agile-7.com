@@ -31,7 +31,7 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [x] Let's talk page
 - [x] New post: the review bottleneck
 - [x] Home page
-- [ ] Launch: replace the placeholder
+- [x] Launch: replace the placeholder
 
 ## Open questions
 
