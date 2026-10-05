@@ -1,7 +1,7 @@
 # agile-7.com
 
 Ahmed Avais's site for Agile-7. It used to be a WordPress blog and services site; this is the rebuild.
-Right now it is only the foundation: one placeholder page, deployed.
+The first version has Home, About, Writing and Let's talk; `docs/plan.md` tracks what's left.
 
 ## Purpose
 
@@ -35,7 +35,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - `public/_redirects`: 301s from old WordPress URLs to their new home. Cloudflare applies it before serving assets.
 - `src/lib/`: pure logic, with `*.test.ts` next to it (vitest). Pages only render.
 - `src/layouts/Base.astro`: shared shell for every page: head, header, footer.
-- `src/components/`: pieces of the shell. `SiteFooter` carries the "let's talk" ask that ends every page except Let's talk itself (`ask={false}` on `Base`). `FlowDiagram` draws a left-to-right flow that stacks on phones; use it for diagrams instead of ASCII or images.
+- `src/components/`: pieces of the shell. `SiteFooter` carries the "let's talk" ask that ends every page except Let's talk itself (`ask={false}` on `Base`). `FlowDiagram` draws a left-to-right flow that stacks on phones; use it for diagrams instead of ASCII or images. `SystemsJourney` is the machines → teams → teams + AI diagram shared by Home and About.
 - `src/styles/global.css`: design tokens and shared styles.
 - Fonts are self-hosted through Astro's font support (`fonts` in `astro.config.mjs`). Don't load fonts from third-party servers.
 

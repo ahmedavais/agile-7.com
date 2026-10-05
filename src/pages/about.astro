@@ -1,12 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import FlowDiagram from '../components/FlowDiagram.astro';
-
-const systemsJourney = [
-  { label: 'machines', detail: 'networks, fare systems' },
-  { label: 'teams', detail: 'XP, coaching, HSD' },
-  { label: 'teams + AI', detail: 'specs, harness, safety net' },
-];
+import SystemsJourney from '../components/SystemsJourney.astro';
 ---
 
 <Base title="About" description="Ahmed Avais has spent 25 years learning how systems behave: first machines, then teams, and now teams working with AI.">
@@ -14,7 +8,7 @@ const systemsJourney = [
     <h1>About</h1>
     <p>I'm Ahmed Avais. For 25 years I've worked on one question: how do systems behave, and how do you help them change? The systems kept getting more human.</p>
 
-    <FlowDiagram title="From machines to teams to teams working with AI" steps={systemsJourney} />
+    <SystemsJourney />
 
     <h2>Machines</h2>
     <p>I started in Lahore in 2000 by launching an internet service provider without knowing how. We had six months. At the launch expo the other providers handed out brochures, and we let people get online at our stand. Within a year I was helping run a network operations centre for SITA, keeping data flowing for more than 65 clients, from airlines to the United Nations.</p>
