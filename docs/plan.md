@@ -29,8 +29,8 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [x] Redirect their old WordPress URLs to `/writing/<slug>`
 - [x] About page
 - [x] Let's talk page
+- [x] New post: the review bottleneck
 - [ ] Home page
-- [ ] New post: the review bottleneck
 - [ ] Launch: replace the placeholder
 
 ## Open questions
