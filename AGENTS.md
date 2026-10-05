@@ -42,6 +42,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 
 ## Conventions
 
+- Write in American English: organization, center, recognize, practiced, judgment. The audience is American.
 - Pages work at 375px wide and respect `prefers-color-scheme`.
 - Never commit secrets. Cloudflare credentials live only in GitHub Actions secrets.
 - After a visual change, check it in the browser at desktop and mobile widths.
