@@ -6,21 +6,21 @@ date: 2026-10-04
 
 import FlowDiagram from '../../components/FlowDiagram.astro';
 
-I spent twelve years as a systems engineer at the Chicago Transit Authority, and that's where I started applying Eli Goldratt's ideas. His central one is simple: every system has one constraint that limits everything else. Improve anything else and the system gets busier without getting faster.
+I spent more than a decade as a systems engineer on mission-critical infrastructure, and that's where I started applying Eli Goldratt's ideas. His central one is that every system has a single constraint limiting everything else, so improving anything other than that constraint makes the system busier without making it faster.
 
-I've been thinking about Goldratt a lot this year, because my engineering team moved its constraint.
+Goldratt has been on my mind a lot this year, because my engineering team's constraint has moved.
 
 ## Writing got cheap
 
 My team now generates most of its code through AI tooling. We tried several spec-driven approaches before settling on our current mix: specs that describe the change, skills that teach the agents how we work, and hooks that build good habits into every session.
 
-Writing code used to be the slow part of our work. It isn't anymore. The code arrives faster than anyone can read it.
+Writing code used to be the slow part of our work, but now the code arrives faster than anyone can read it.
 
 ## Review became the constraint
 
-The first instinct, for us and for most teams I talk to, is to keep a human reviewing every line. That feels responsible. In Goldratt's terms, it parks the whole system behind its slowest step. Engineers spend their days reading generated code, the queue grows, and the people you trust most with quality become the reason nothing ships.
+The first instinct, for us and for most teams I talk to, is to keep a human reviewing every line. It feels responsible, but in Goldratt's terms it parks the whole system behind its slowest step: engineers spend their days reading generated code, the queue grows, and the people you trust most with quality become the reason nothing ships.
 
-AI also hallucinates. It generates, and some of what it generates is wrong in ways that look right. More reading by tired people won't catch that reliably.
+AI also hallucinates, and some of what it generates is wrong in ways that look right, which more reading by tired people won't reliably catch.
 
 ## Elevate the constraint
 
@@ -37,16 +37,16 @@ So we stopped asking people to read faster and built a safety net around review:
   ]}
 />
 
-Static analysis and automated code review catch the routine problems. Adversarial agents review the code looking for what the generating agent got wrong. Linting alone was never going to be enough.
+Static analysis and automated code review catch the routine problems, while adversarial agents go looking for what the generating agent got wrong. Linting alone was never going to be enough.
 
-My senior engineers still watch the code closely. Their job has shifted, though. When they find a problem, they ask how to catch it every time from now on, and they codify the answer into a skill, a hook or a check. Each pass through the system leaves it a little better than the last. Anyone who has practiced test-driven development will recognize the habit.
+My senior engineers still watch the code closely, but their job has shifted. When they find a problem, they ask how to catch it every time from now on and codify the answer into a skill, a hook or a check, so each pass through the system leaves it a little better than the last. Anyone who has practiced test-driven development will recognize the habit.
 
 ## The constraint moves again
 
-Goldratt's last step is to go back to the start, because once you elevate one constraint, another appears. Ours is moving out of the inner loop of writing and checking code and into the outer loop: deciding what to build, and keeping specs that stay true as the product changes. We're still learning there.
+Goldratt's last step is to go back to the start, because once you elevate one constraint, another appears. Ours is moving out of the inner loop of writing and checking code and into the outer loop of deciding what to build and keeping specs true as the product changes, and we're still learning there.
 
 ## The hard part
 
-The tooling was the easier half. When the work you were proud of becomes the work an agent does, it shakes how you see yourself as an engineer. My team has felt that. We measure team health, we talk about it openly, and we're making progress, but I won't pretend the transition was smooth.
+The tooling was the easier half. When the work you were proud of becomes work an agent does, it shakes how you see yourself as an engineer, and my team has felt that. We measure team health and talk about it openly, and we're making progress, but I won't pretend the transition was smooth.
 
-That's the part I'd most like to compare notes on. If your teams are going through the same shift, I'd like to hear what you're seeing.
+That's the part I'd most like to compare notes on, so if your teams are going through the same shift, I'd like to hear what you're seeing.
