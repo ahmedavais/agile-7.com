@@ -7,8 +7,9 @@ import { newestFirst } from '../../lib/writing';
 const posts = newestFirst(await getCollection('writing'));
 ---
 
-<Base title="Writing" description="Ahmed Avais on teams, change and working with AI.">
+<Base title="Writing" description="Ahmed Avais on teams, change and complexity.">
   <h1>Writing</h1>
+  <p>I write about teams, change and complexity. The newest pieces come from leading engineering teams today, and the 2020 posts come from my years as a coach, where many of these ideas started.</p>
   <ol class="reading-list">
     {posts.map((post) => (
       <li>
