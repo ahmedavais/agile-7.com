@@ -1,13 +1,20 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const talks = [
-  { title: 'Using Human Systems Dynamics', venue: 'Ignite-Agility Meetup', year: 2021 },
-  { title: 'Introduction to the Agile Fluency Suite', venue: 'Agile 757', year: 2021 },
-  { title: 'Using the Harada Method to Develop People', venue: 'TriAgile, Raleigh', year: 2019 },
-  { title: 'Custom-Tailored Agility', venue: 'Agile Leadership Network RTP', year: 2019 },
-  { title: 'Deliberate Practice: Myth, Magic, and Mindfulness', venue: 'Agile Cincy', year: 2018 },
-  { title: 'Design Thinking in Practice', venue: 'Fitch Ratings', year: 2018 },
+const talksAndSessions = [
+  { title: 'Human Systems Dynamics', venue: 'Agile Coach Camp Worldwide', year: '2026' },
+  { title: 'Adaptive Action for Sustainability', venue: 'ODN Summit, Raleigh', year: '2023' },
+  { title: 'Sociocracy Training Workshop', venue: 'Common Ground EcoVillage', year: '2023' },
+  { title: 'Using Human Systems Dynamics', venue: 'Ignite-Agility Meetup', year: '2021' },
+  { title: 'Introduction to the Agile Fluency Suite', venue: 'Agile 757', year: '2021' },
+  { title: 'Coaching clinic', venue: 'Big Apple Scrum Day', year: '2021' },
+  { title: "A Leader's Guide for Social Responsibility", venue: 'LASTTalk Australia', year: '2020' },
+  { title: 'The Power of Inquiry', venue: 'Agile Open Northwest, Seattle', year: '2020' },
+  { title: 'Using the Harada Method to Develop People', venue: 'TriAgile, Raleigh', year: '2019' },
+  { title: 'Custom-Tailored Agility', venue: 'Agile Leadership Network RTP', year: '2019' },
+  { title: 'Deliberate Practice: Myth, Magic, and Mindfulness', venue: 'Agile Cincy', year: '2018' },
+  { title: 'Design Thinking in Practice', venue: 'Fitch Ratings', year: '2018' },
+  { title: 'The Numbers Game: Your Agile Project Needs a Budget, Not Estimates', venue: 'Agile Indy', year: '2017' },
 ];
 ---
 
@@ -18,22 +25,22 @@ const talks = [
 
     <h2>What we could talk about</h2>
     <h3>Your teams and AI</h3>
-    <p>Bringing AI into engineering without losing quality or people: specs, harnesses, review safety nets, and the human side of the change.</p>
+    <p>I can help you bring AI into your engineering work without losing quality or people, from specs, harnesses and review safety nets to the human side of the change.</p>
     <h3>Change that sticks</h3>
-    <p>Shifting the patterns in an organization so new ways of working last, whether that's one team or two hundred.</p>
+    <p>I help organizations shift the patterns that hold old habits in place, so new ways of working last, whether you have one team or two hundred.</p>
     <h3>1:1 leadership development</h3>
-    <p>Coaching for engineering leaders. I'm an ICF Professional Certified Coach.</p>
+    <p>As an ICF Professional Certified Coach, I work one-on-one with engineering leaders on the challenges in front of them and the leaders they want to become.</p>
     <h3>Workshops and talks</h3>
-    <p>Hands-on sessions for teams and leaders, including agile games.</p>
+    <p>I run hands-on sessions for teams and leaders, including agile games that let people practice new ways of working before they try them for real.</p>
 
-    <h2>Talks I've given</h2>
+    <h2>Talks and sessions</h2>
     <ul class="talks">
-      {talks.map((talk) => (
-        <li><cite>{talk.title}</cite>, {talk.venue}, {talk.year}</li>
+      {talksAndSessions.map((talk) => (
+        <li><cite>{talk.title}</cite> <span class="talk-where">{talk.venue}, {talk.year}</span></li>
       ))}
     </ul>
 
     <h2>Get in touch</h2>
-    <p>Email me at <a href="mailto:ahmed@agile-7.com">ahmed@agile-7.com</a>. Tell me a little about your teams and what's on your mind. You can also find me on <a href="https://www.linkedin.com/in/ahmedavais">LinkedIn</a>.</p>
+    <p>Email me at <a href="mailto:ahmed@agile-7.com">ahmed@agile-7.com</a> and tell me a little about your teams and what's on your mind, or find me on <a href="https://www.linkedin.com/in/ahmedavais">LinkedIn</a> if you'd rather start there.</p>
   </article>
 </Base>
