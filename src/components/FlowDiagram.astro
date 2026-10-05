@@ -1,0 +1,24 @@
+---
+interface Step {
+  label: string;
+  detail: string;
+}
+
+interface Props {
+  title: string;
+  steps: Step[];
+}
+
+const { title, steps } = Astro.props;
+---
+
+<figure class="flow-diagram">
+  <ol aria-label={title}>
+    {steps.map((step) => (
+      <li>
+        <span class="flow-label">{step.label}</span>
+        <span class="flow-detail">{step.detail}</span>
+      </li>
+    ))}
+  </ol>
+</figure>
