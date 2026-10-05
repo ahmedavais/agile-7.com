@@ -1,6 +1,6 @@
 ---
 title: Beginning and Ending with Gratitude, Part 2
-summary: Glenda Eoyang’s “Poems” exercise, run over Zoom. I expected it to fall flat without sticky notes in a room. It didn’t.
+summary: I expected Glenda Eoyang’s “Poems” exercise to fall flat over Zoom without sticky notes in a room, and the energy in the session proved me wrong.
 date: 2020-07-24
 ---
 

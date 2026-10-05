@@ -1,6 +1,6 @@
 ---
 title: Beginning and Ending with Gratitude
-summary: Thanking five people a day felt awkward at first. It turned into an energy store, and a meeting warm-up you can try with your team.
+summary: Thanking five people a day felt awkward at first, but it became an energy store for me and led to a meeting warm-up you can try with your own team.
 date: 2020-04-18
 ---
 

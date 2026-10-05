@@ -1,6 +1,6 @@
 ---
 title: The Power of Inquiry
-summary: A simple exercise from Human Systems Dynamics for getting unstuck. Describe a sticky issue in three sentences, then only listen to the questions.
+summary: "This exercise from Human Systems Dynamics helps you get unstuck: describe a sticky issue in three sentences, then listen to the questions without answering them."
 date: 2020-06-17
 ---
 
