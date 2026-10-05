@@ -37,4 +37,3 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 
 - Which stories become case studies. Add a page once the first one is written.
 - The Dynamical Change newsletter: restart it, move it to Substack, or neither. Left off the site for now.
-- How much detail about current work can appear publicly.
