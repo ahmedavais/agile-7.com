@@ -1,13 +1,14 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
 
+import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://agile-7.com',
   trailingSlash: 'never',
   build: { format: 'file' },
-  integrations: [sitemap()],
+  integrations: [mdx(), sitemap()],
   fonts: [
     {
       provider: fontProviders.fontsource(),
