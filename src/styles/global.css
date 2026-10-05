@@ -109,3 +109,7 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
   .flow-diagram li { flex: 1; }
   .flow-diagram li + li::before { content: '→' / ''; top: 0; left: -28px; }
 }
+
+.prose h3 { font-family: var(--font-mono); font-size: 15px; font-weight: 500; color: var(--accent); margin: 28px 0 0; }
+.prose h3 + p { margin-top: 4px; }
+.talks cite { font-style: normal; font-family: var(--font-serif); font-size: 1.05em; }
