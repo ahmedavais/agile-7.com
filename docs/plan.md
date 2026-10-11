@@ -35,6 +35,17 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [x] Home page
 - [x] Launch: replace the placeholder
 
+## After launch
+
+- [x] Link-preview card for LinkedIn and Slack
+- [x] Work section with its first case study
+- [x] Second case study, from a different industry
+- [ ] Post: Every bug teaches the system
+- [ ] A current headshot for About
+- [ ] The year of the Dalian workshops, for the talks list
+- [ ] Confirm the title of the 2017 Agile Indy talk
+- [ ] Gather the rest of Ahmed's talks
+
 ## Open questions
 
 - The Dynamical Change newsletter: restart it, move it to Substack, or neither. Left off the site for now.
