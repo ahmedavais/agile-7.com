@@ -1,6 +1,6 @@
 # agile-7.com
 
-Ahmed Avais's site for Agile-7. It used to be a WordPress blog and services site; this is the rebuild.
+Ahmed Avais's site for Agile 7. It used to be a WordPress blog and services site; this is the rebuild.
 The site has Home, Work, About, Writing and Let's talk; `docs/plan.md` tracks what's left.
 
 ## Purpose
@@ -48,6 +48,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 
 ## Conventions
 
+- The name: "Agile 7" in prose, page titles and anywhere it's read as a name (the company is Agile 7, Inc). "agile-7" only as the header wordmark and in the domain. Never "Agile-7".
 - Write in American English: organization, center, recognize, practiced, judgment. The audience is American.
 - Pages work at 375px wide and respect `prefers-color-scheme`.
 - Never commit secrets. Cloudflare credentials live only in GitHub Actions secrets.

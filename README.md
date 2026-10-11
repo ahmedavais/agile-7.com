@@ -1,6 +1,6 @@
 # agile-7.com
 
-Ahmed Avais's site for Agile-7.
+Ahmed Avais's site for Agile 7.
 
 ```bash
 npm install
