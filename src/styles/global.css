@@ -53,7 +53,8 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
   font-size: 14px;
 }
 .site-header a { text-decoration: none; }
-.site-name { font-weight: 500; }
+.site-name { font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
+.site-mark { width: 20px; height: 20px; color: var(--brand-teal); flex: none; }
 .site-nav { display: flex; gap: 20px; }
 .site-nav a:hover, .site-name:hover { color: var(--accent); }
 

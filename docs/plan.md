@@ -19,6 +19,7 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 
 - Warm off-white background, with a dark mode that follows the system setting.
 - Serif headings (Newsreader), sans-serif body (Inter), monospace (IBM Plex Mono) for navigation, labels and diagrams.
+- The seven-leaf mark from the Agile 7 logo, small and quiet, in three places only: the header beside "agile-7", the favicon and the share card.
 - One teal accent from the Agile 7 logo (PANTONE 3255 C, `#43C1BB`). Text, links and the ask use a deeper teal (`#277773`) in light mode so they pass WCAG AA on both backgrounds; the full brand teal is for the mark and diagram borders, and for everything in dark mode.
 - Diagrams are the signature. They keep the monospace look but are built from HTML boxes and arrows, so they stack on a phone and screen readers can follow them. No ASCII in `<pre>`, no images.
 
