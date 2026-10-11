@@ -42,8 +42,8 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [x] Second case study, from a different industry
 - [x] Post: Every bug teaches the system
 - [x] A current headshot for About
-- [ ] The year of the Dalian workshops, for the talks list
-- [ ] Confirm the title of the 2017 Agile Indy talk
+- [x] The year of the Dalian workshops, for the talks list
+- [x] Confirm the title of the 2017 Agile Indy talk
 - [ ] Gather the rest of Ahmed's talks
 
 ## Open questions
