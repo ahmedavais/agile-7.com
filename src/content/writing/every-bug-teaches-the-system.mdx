@@ -1,0 +1,51 @@
+---
+title: Every bug teaches the system
+summary: When AI writes most of the code, my senior engineers do their best work by turning each problem they catch into a skill, a hook or a check, so the system catches it every time after.
+date: 2026-10-10
+---
+
+import FlowDiagram from '../../components/FlowDiagram.astro';
+
+Test-driven development taught me a habit I've never let go of: when a bug gets through, you write a test that would have caught it before you fix it, so that bug can never come back. The fix solves today's problem, and the test protects every day after.
+
+That habit has turned out to be one of the most useful things my team brings to working with AI.
+
+## The old job doesn't scale
+
+In a traditional code review, a senior engineer spots a problem, leaves a comment, and the author fixes it. The knowledge behind that catch stays in the reviewer's head, so the next pull request can make the same mistake and the reviewer has to catch it again.
+
+That was tolerable when people wrote every line by hand. Now that agents generate most of our code, the same mistake can show up in a dozen places in a single week, and a reviewer who catches it once has barely started. If my senior engineers spent their days catching the same problems over and over, they would become the bottleneck I wrote about in [The bottleneck moved](/writing/the-bottleneck-moved), and we'd lose their judgment to repetition.
+
+## The new loop
+
+So we ask a different question whenever someone finds a problem: how would we catch this every time from now on?
+
+<FlowDiagram
+  title="What happens when an engineer finds a problem"
+  steps={[
+    { label: 'catch', detail: 'an engineer spots a problem' },
+    { label: 'ask', detail: 'how would we catch it every time?' },
+    { label: 'codify', detail: 'a skill, a hook or a check' },
+    { label: 'compound', detail: 'the system catches it from now on' },
+  ]}
+/>
+
+The answer usually lands in one of three places, depending on when the problem can be stopped:
+
+- A skill teaches the agents how we work before they write anything, so the mistake doesn't get made in the first place.
+- A hook builds a habit into the moment it matters, like running the right checks before a change is considered done.
+- A check catches the problem after the code is written, through static analysis, automated review or an adversarial agent looking for exactly that kind of mistake.
+
+Earlier is cheaper. A skill that prevents a mistake costs less than a check that catches it, and a check costs less than a person finding it in review. Some problems can only be caught late, though, and that's fine as long as they're caught every time.
+
+## What changes for the engineers
+
+This changes what senior engineers spend their judgment on. Instead of being the last line of defense on every change, they design the system that produces the code, and every catch makes that system a little better than it was. Their expertise compounds instead of being spent one review at a time.
+
+For some engineers that shift is energizing, and for others it's unsettling, because being the person who catches the subtle bug has been part of their identity for years. I've found it helps to say out loud that their judgment matters more than ever. It just shows up in the system now, where it keeps working long after the review is over.
+
+## What leaders can do
+
+If you lead teams going through this, make codifying count as real work. A senior engineer who spends an afternoon turning a recurring review comment into a check has done more for quality than one who leaves the same comment twenty more times, but only one of those shows up as visible effort unless you make room for it. Give people time for it, celebrate it in your reviews and retrospectives, and watch whether the same problems keep coming back. When they stop, the system is learning.
+
+I'd like to hear how other teams are handling this. If your engineers have found good ways to turn their judgment into something the whole system can use, tell me about it.
