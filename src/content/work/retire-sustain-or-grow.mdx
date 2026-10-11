@@ -1,0 +1,44 @@
+---
+title: Retire, sustain or grow
+summary: A federal agency had to decide the future of more than 40 financial-education products. My team went past the brief, pairing AI similarity scoring across 70 sites with real usage data, so every recommendation came with evidence.
+date: 2024-11-14
+---
+
+import FlowDiagram from '../../components/FlowDiagram.astro';
+
+In 2024 I led the delivery team for a federal agency that had built up years of financial-education material on its website: tools, guides and handouts for consumers at every stage of life. Keeping all of it accurate and current took real effort, so the agency asked a simple question with a hard answer. Which products should it retire, which should it sustain, and which deserved more investment?
+
+We had about eight months and a fixed price to review more than 40 consumer-facing products and recommend a future for each one.
+
+## Going past the checklist
+
+The agency had prepared the groundwork well, with review criteria, batches of content and scoring spreadsheets. Following that process would have produced a respectable set of opinions. As a team, we decided every recommendation should rest on evidence the agency could check for itself, so we added three things the brief didn't ask for.
+
+We interviewed the product owners to learn the history and purpose behind each product. We mapped the website to see how every product connected to the rest of the agency's resources. And we built a way to find duplicated content, both within the agency's own site and across other federal websites.
+
+## Finding the duplicates
+
+Comparing thousands of documents across 70 sites by hand wasn't realistic, so we let the machines do the comparing:
+
+<FlowDiagram
+  title="How the duplicate detection worked"
+  steps={[
+    { label: 'collect', detail: 'scrape 70 sites for documents' },
+    { label: 'read', detail: 'extract the text from each PDF' },
+    { label: 'embed', detail: 'turn meaning into vectors' },
+    { label: 'compare', detail: 'score every pair from 0 to 1' },
+    { label: 'decide', detail: 'similarity next to real usage' },
+  ]}
+/>
+
+We converted each document into embeddings that capture what the text means, stored them in Postgres as a vector database, and scored the cosine similarity of every pair. A full run across 70 sites took more than two days of processing, so we spread the work across parallel batch jobs in the cloud.
+
+The scores only mattered once they met real usage. Our report put each pair of near-duplicates next to how many people actually used each copy, so a 99% match between two versions of the same parents' handout came with a clear answer about which one to keep. An interactive report let the agency filter and verify the matches themselves, and a small web app brought in their site analytics, built so that only the agency's core team could see that data and the engineers could not.
+
+## The hard part
+
+Partway through, leadership changed on the agency side, and the people we worked with changed with it. We had held weekly check-ins with the agency from before we even had network access, and that habit paid off: we re-planned the schedule together, finished every deliverable with a two-week extension, and stayed within the fixed price.
+
+## What I took from it
+
+The AI in this project made no decisions. It turned slow, subjective judgment calls into evidence that people could look at, question and act on, which is where I think AI earns its place. The other lesson was older and just as important: start building the working relationship before the work itself begins, because that's what carries you through the changes you can't plan for.
