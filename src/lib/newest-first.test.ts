@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { newestFirst } from './writing';
+import { newestFirst } from './newest-first';
 
 const postFrom = (title: string, date: string) => ({ data: { title, date: new Date(date) } });
 
