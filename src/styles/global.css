@@ -125,3 +125,13 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
 .latest > a:hover h2 { color: var(--accent); }
 .latest h2 { margin: 6px 0 4px; }
 .latest .more { font-family: var(--font-mono); font-size: 14px; color: var(--accent); text-decoration: none; }
+
+.about-intro { margin-top: 64px; }
+.about-intro h1 { margin-top: 24px; }
+.headshot { display: block; width: 160px; height: auto; border-radius: 6px; }
+@media (min-width: 640px) {
+  .about-intro { display: flex; align-items: flex-end; gap: 32px; }
+  .about-intro h1 { margin-top: 0; }
+  .about-intro p { margin-bottom: 0; }
+  .headshot { flex: none; width: 180px; }
+}
