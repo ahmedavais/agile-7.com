@@ -1,0 +1,26 @@
+---
+import PublishedOn from './PublishedOn.astro';
+
+interface Props {
+  label: string;
+  href: string;
+  title: string;
+  summary: string;
+  date?: Date;
+  allHref: string;
+  allLabel: string;
+}
+
+const { label, href, title, summary, date, allHref, allLabel } = Astro.props;
+const headingId = `${label.replace(/\s+/g, '-')}-heading`;
+---
+
+<section class="latest" aria-labelledby={headingId}>
+  <p class="label" id={headingId}>{label}</p>
+  <a href={href}>
+    <h2>{title}</h2>
+  </a>
+  {date && <PublishedOn date={date} />}
+  <p>{summary}</p>
+  <a class="more" href={allHref}>{allLabel}</a>
+</section>
