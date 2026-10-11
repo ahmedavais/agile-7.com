@@ -2,9 +2,10 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import SystemsJourney from '../components/SystemsJourney.astro';
-import PublishedOn from '../components/PublishedOn.astro';
+import LatestEntry from '../components/LatestEntry.astro';
 import { newestFirst } from '../lib/newest-first';
 
+const [latestStory] = newestFirst(await getCollection('work'));
 const [latestPost] = newestFirst(await getCollection('writing'));
 ---
 
@@ -14,15 +15,26 @@ const [latestPost] = newestFirst(await getCollection('writing'));
 
   <SystemsJourney />
 
+  {latestStory && (
+    <LatestEntry
+      label="latest work"
+      href={`/work/${latestStory.id}`}
+      title={latestStory.data.title}
+      summary={latestStory.data.summary}
+      allHref="/work"
+      allLabel="all work →"
+    />
+  )}
+
   {latestPost && (
-    <section class="latest" aria-labelledby="latest-heading">
-      <p class="label" id="latest-heading">latest writing</p>
-      <a href={`/writing/${latestPost.id}`}>
-        <h2>{latestPost.data.title}</h2>
-      </a>
-      <PublishedOn date={latestPost.data.date} />
-      <p>{latestPost.data.summary}</p>
-      <a class="more" href="/writing">all writing →</a>
-    </section>
+    <LatestEntry
+      label="latest writing"
+      href={`/writing/${latestPost.id}`}
+      title={latestPost.data.title}
+      summary={latestPost.data.summary}
+      date={latestPost.data.date}
+      allHref="/writing"
+      allLabel="all writing →"
+    />
   )}
 </Base>
