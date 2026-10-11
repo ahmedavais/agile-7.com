@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import SystemsJourney from '../components/SystemsJourney.astro';
 import PublishedOn from '../components/PublishedOn.astro';
-import { newestFirst } from '../lib/writing';
+import { newestFirst } from '../lib/newest-first';
 
 const [latestPost] = newestFirst(await getCollection('writing'));
 ---
