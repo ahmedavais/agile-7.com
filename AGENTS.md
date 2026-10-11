@@ -42,6 +42,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - `src/assets/`: images that Astro optimizes at build time, such as Ahmed's headshot on About. Use `<Image>` from `astro:assets` for them.
 - `src/styles/global.css`: design tokens and shared styles.
 - `public/share-image.png`: the link-preview card every page uses (`og:image`). Its source is `design/share-image.html`; after editing it, re-render with Chrome headless: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --force-device-scale-factor=1 --virtual-time-budget=5000 --window-size=1200,630 --screenshot="$PWD/public/share-image.png" "file://$PWD/design/share-image.html"`.
+- Analytics: Cloudflare Web Analytics, switched on in the Cloudflare dashboard, which injects its own small script at the edge. Nothing in this repo adds it, and no other trackers belong on the site.
 - Fonts are self-hosted through Astro's font support (`fonts` in `astro.config.mjs`). Don't load fonts from third-party servers.
 
 ## Conventions
