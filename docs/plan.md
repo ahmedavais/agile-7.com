@@ -40,6 +40,7 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [x] Link-preview card for LinkedIn and Slack
 - [x] Work section with its first case study
 - [x] Second case study, from a different industry
+- [x] Third case study: AI-era evidence from a federal engagement
 - [x] Post: Every bug teaches the system
 - [x] A current headshot for About
 - [x] The year of the Dalian workshops, for the talks list
@@ -47,6 +48,6 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [ ] Gather the rest of Ahmed's talks
 - [ ] Host talk decks on agile-7.com as PDFs from Ahmed's originals, so the links can't break (SlideShare and Sched return OK even for missing pages, so link checks can't catch rot)
 
-## Open questions
+## Decisions
 
-- The Dynamical Change newsletter: restart it, move it to Substack, or neither. Left off the site for now.
+- No separate newsletter. The 2020 Dynamical Change issues were digests pointing to posts, videos and events; agile-7.com plus LinkedIn covers that now. If email comes back, a service like Substack or Buttondown sends posts out while agile-7.com stays their home, and the sender address is a PO box or virtual mailbox, never a home address.
