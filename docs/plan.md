@@ -51,3 +51,4 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 ## Decisions
 
 - No separate newsletter. The 2020 Dynamical Change issues were digests pointing to posts, videos and events; agile-7.com plus LinkedIn covers that now. If email comes back, a service like Substack or Buttondown sends posts out while agile-7.com stays their home, and the sender address is a PO box or virtual mailbox, never a home address.
+- Keep Cloudflare Web Analytics, which Cloudflare injects on every page because it's turned on for the domain. It's cookieless and free, and it answers whether people read the proof and where they came from. Ad and tracker blockers hide many engineers, so read it as a minimum and a trend, not a total. Revisit after a few months.
