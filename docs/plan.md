@@ -9,6 +9,8 @@ The first public version of agile-7.com. Purpose and audience live in [AGENTS.md
 - Writing (`/writing`, posts at `/writing/<slug>`): the 2020 posts and new ones. agile-7.com stays the canonical home for writing.
 - Let's talk (`/contact`): the kinds of conversation (consulting, speaking, 1:1 development, agile games), talks given, and email.
 
+- Work (`/work`, case studies at `/work/<slug>`): stories from engagements, with the setbacks left in. Clients stay unnamed.
+
 Every page ends with the same ask: let's talk.
 
 ## Design direction
@@ -35,5 +37,4 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 
 ## Open questions
 
-- Which stories become case studies. Add a page once the first one is written.
 - The Dynamical Change newsletter: restart it, move it to Substack, or neither. Left off the site for now.

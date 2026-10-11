@@ -91,6 +91,8 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
 .entry-list p { margin: 8px 0 0; }
 
 .post-header { margin-bottom: 32px; }
+.post-header .label { font-family: var(--font-mono); font-size: 13px; color: var(--accent); margin: 64px 0 0; }
+.post-header .label + h1 { margin-top: 8px; }
 .post-header h1 { margin-bottom: 8px; }
 
 .prose p, .prose li { color: var(--fg); }

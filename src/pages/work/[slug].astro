@@ -1,0 +1,28 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const stories = await getCollection('work');
+  return stories.map((story) => ({ params: { slug: story.id }, props: { story } }));
+}
+
+interface Props {
+  story: CollectionEntry<'work'>;
+}
+
+const { story } = Astro.props;
+const { Content } = await render(story);
+---
+
+<Base title={story.data.title} description={story.data.summary}>
+  <article>
+    <header class="post-header">
+      <p class="label">work · {story.data.date.getUTCFullYear()}</p>
+      <h1>{story.data.title}</h1>
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>
