@@ -2,6 +2,7 @@
 import { Font } from 'astro:assets';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import { publicPath } from '../lib/public-path';
 import '../styles/global.css';
 
 interface Props {
@@ -13,7 +14,7 @@ interface Props {
 
 const { title, ask = true, canonical: firstPublishedAt, description = 'Ahmed Avais helps engineering leaders build healthy teams, make change stick and lead well in complex systems.' } = Astro.props;
 const fullTitle = title ? `${title} · Agile 7` : 'Agile 7';
-const canonical = firstPublishedAt ?? new URL(Astro.url.pathname, Astro.site);
+const canonical = firstPublishedAt ?? new URL(publicPath(Astro.url.pathname), Astro.site);
 const shareImage = new URL('/share-image.png', Astro.site);
 ---
 
