@@ -8,6 +8,7 @@ const writing = defineCollection({
     title: z.string(),
     summary: z.string(),
     date: z.coerce.date(),
+    canonical: z.url().optional(),
   }),
 });
 
