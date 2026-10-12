@@ -46,10 +46,11 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [x] A current headshot for About
 - [x] The year of the Dalian workshops, for the talks list
 - [x] Confirm the title of the 2017 Agile Indy talk
+- [ ] Refresh the "What shape is your team in?" screenshots once the tool says "Groupthink"
 - [ ] Gather the rest of Ahmed's talks
 - [ ] Host talk decks on agile-7.com as PDFs from Ahmed's originals, so the links can't break (SlideShare and Sched return OK even for missing pages, so link checks can't catch rot)
 
 ## Decisions
 
-- No separate newsletter. The 2020 Dynamical Change issues were digests pointing to posts, videos and events; agile-7.com plus LinkedIn covers that now. If email comes back, a service like Substack or Buttondown sends posts out while agile-7.com stays their home, and the sender address is a PO box or virtual mailbox, never a home address.
+- The newsletter is Dynamical Change on Substack (ahmedavais.substack.com), free for now; revisit a paid tier only with evidence such as a steady rhythm and readers asking for more. Posts can appear on both Substack and agile-7.com; the copy on agile-7.com sets `canonical` to wherever the piece first appeared. If Substack ever needs a sender address, use a PO box or virtual mailbox, never a home address.
 - Keep Cloudflare Web Analytics, which Cloudflare injects on every page because it's turned on for the domain. It's cookieless and free, and it answers whether people read the proof and where they came from. Ad and tracker blockers hide many engineers, so read it as a minimum and a trend, not a total. Revisit after a few months.

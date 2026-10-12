@@ -33,7 +33,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 
 - `docs/plan.md`: the pages planned for the first version, the steps to build them, and open questions.
 - `src/pages/`: one file per route.
-- `src/content/writing/<slug>.md` (or `.mdx` when a post uses a component such as `FlowDiagram`): one per post, served at `/writing/<slug>`. Frontmatter schema in `src/content.config.ts`. The 2020 posts keep their WordPress slugs.
+- `src/content/writing/<slug>.md` (or `.mdx` when a post uses a component such as `FlowDiagram`): one per post, served at `/writing/<slug>`. Frontmatter schema in `src/content.config.ts`. A post that first appeared elsewhere (such as the Dynamical Change newsletter on Substack) sets `canonical` to that URL; otherwise the page is its own canonical. The 2020 posts keep their WordPress slugs.
 - `src/content/work/<slug>.mdx`: one case study per engagement, served at `/work/<slug>`. Proof, not opinion: a real situation, the setback, what changed, what happened. Clients stay unnamed and described broadly enough that no single one is identifiable.
 - `public/_redirects`: 301s from old WordPress URLs to their new home. Cloudflare applies it before serving assets.
 - `src/lib/`: pure logic (`newestFirst` orders both Writing and Work), with `*.test.ts` next to it (vitest). Pages only render.
