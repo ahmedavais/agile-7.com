@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { internalLinksIn, redirectTargets, resolvesIn } from './site-links';
+import { internalLinksIn, redirectRules, redirectTargets, resolvesIn } from './site-links';
 
 const built = new Set(['index.html', 'about.html', 'writing/the-power-of-inquiry.html', 'favicon.svg', '_astro/client.js']);
 
@@ -40,5 +40,11 @@ describe('redirectTargets', () => {
     const redirects = '# old WordPress posts\n/the-power-of-inquiry /writing/the-power-of-inquiry 301\n\n/the-power-of-inquiry/ /writing/the-power-of-inquiry 301\n';
 
     expect(redirectTargets(redirects)).toEqual(['/writing/the-power-of-inquiry', '/writing/the-power-of-inquiry']);
+  });
+});
+
+describe('redirectRules', () => {
+  it('reads each redirect as where it comes from and where it sends people', () => {
+    expect(redirectRules('# old WordPress pages\n/ahmed-avais /about 301\n')).toEqual([{ from: '/ahmed-avais', to: '/about' }]);
   });
 });

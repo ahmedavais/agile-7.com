@@ -49,9 +49,14 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [ ] Refresh the "What shape is your team in?" screenshots once the tool says "Groupthink"
 - [ ] Gather the rest of Ahmed's talks
 - [ ] Host talk decks on agile-7.com as PDFs from Ahmed's originals, so the links can't break (SlideShare and Sched return OK even for missing pages, so link checks can't catch rot)
+- [x] Check every internal link and redirect target in the built site
+- [x] Watch production after each deploy and daily
+- [ ] Review the production watch on 2026-11-14: were failures real or false alarms, does the daily 11:41 UTC run earn its keep, did GitHub's failure emails get noticed, and is any check missing or pure noise?
 
 ## Decisions
 
 - The newsletter is Dynamical Change on Substack (ahmedavais.substack.com), free for now; revisit a paid tier only with evidence such as a steady rhythm and readers asking for more. Posts can appear on both Substack and agile-7.com; the copy on agile-7.com sets `canonical` to wherever the piece first appeared. If Substack ever needs a sender address, use a PO box or virtual mailbox, never a home address.
 - Keep Cloudflare Web Analytics, which Cloudflare injects on every page because it's turned on for the domain. It's cookieless and free, and it answers whether people read the proof and where they came from. Ad and tracker blockers hide many engineers, so read it as a minimum and a trend, not a total. Revisit after a few months.
+- A failed production-watch run is the alarm, emailed by GitHub. No issue tracker in the loop, so alarms don't turn into another backlog.
+- Other sites' links stay unchecked, except places Ahmed owns (ahmedavais.com and the Substack). LinkedIn blocks bots, and SlideShare and Sched answer OK even for missing pages.
 - Bot Fight Mode stays off (turned off 2026-10-14). It answered 403 to GitHub Actions runners and broke automated checks against the live site. Cloudflare's security insights flag this as a Medium finding; that's accepted for a static site with no forms or logins. Revisit only if traffic or abuse grows.

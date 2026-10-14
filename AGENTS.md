@@ -21,6 +21,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - Astro 7, fully static output (`dist/`).
 - Hosted as Cloudflare Worker static assets (`wrangler.jsonc`). No server code.
 - CI/CD: `.github/workflows/ci.yml`. PRs get a preview URL, `main` deploys to production.
+- Watch production: `.github/workflows/watch-production.yml` runs the live checks in `sensors/live/` after every deploy, daily and on demand. A failed run is the alarm (GitHub emails it); there's no issue tracker in the loop.
 - Same setup as ahmedavais.com. Follow its patterns unless there's a reason not to.
 
 ## Commands
@@ -28,6 +29,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - `npm run dev`: dev server at http://localhost:4321. Agents: `npx astro dev --background`, stop with `npx astro dev stop`.
 - `npm run verify`: typecheck + tests + build + sensors. Run before calling any change done; CI runs the same.
 - `npm run sense`: sensors in `sensors/` that check the built site in `dist/` (run after `npm run build`): every internal link and every `_redirects` target resolves to a built page or asset.
+- `npm run watch-production`: live checks against production (`SITE_URL` overrides the site): every sitemap page answers whole in the site shell, every old WordPress URL answers 301 to its new home, and the ahmedavais.com and Substack links answer.
 - `npm run preview`: build and serve through wrangler, the same way production serves it.
 
 ## Layout
@@ -37,7 +39,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - `src/content/writing/<slug>.md` (or `.mdx` when a post uses a component such as `FlowDiagram`): one per post, served at `/writing/<slug>`. Frontmatter schema in `src/content.config.ts`. A post that first appeared elsewhere (such as the Dynamical Change newsletter on Substack) sets `canonical` to that URL; otherwise the page is its own canonical. The 2020 posts keep their WordPress slugs.
 - `src/content/work/<slug>.mdx`: one case study per engagement, served at `/work/<slug>`. Proof, not opinion: a real situation, the setback, what changed, what happened. Clients stay unnamed and described broadly enough that no single one is identifiable.
 - `public/_redirects`: 301s from old WordPress URLs to their new home. Cloudflare applies it before serving assets. `npm run sense` fails if a target doesn't exist.
-- `src/lib/`: pure logic (`newestFirst` orders both Writing and Work; `publicPath` turns a built page like `/about.html` into its public URL `/about`, used for canonical links; `site-links` finds a page's internal links and redirect targets and checks them against the built files, used by the sensors), with `*.test.ts` next to it (vitest). Pages only render.
+- `src/lib/`: pure logic (`newestFirst` orders both Writing and Work; `publicPath` turns a built page like `/about.html` into its public URL `/about`, used for canonical links; `site-links` finds a page's internal links and redirect targets and checks them against the built files, used by the sensors; `live-checks` reads the live sitemap and recognizes a whole page in the site shell, used by the production watch), with `*.test.ts` next to it (vitest). Pages only render.
 - `src/layouts/Base.astro`: shared shell for every page: head, header, footer.
 - `src/components/`: pieces of the shell. `SiteFooter` carries the "let's talk" ask that ends every page except Let's talk itself (`ask={false}` on `Base`). `FlowDiagram` draws a left-to-right flow that stacks on phones; use it for diagrams instead of ASCII or images. `SystemsJourney` is the machines → teams → teams + AI diagram shared by Home and About. `LatestEntry` is the "latest work" and "latest writing" teaser on Home.
 - `src/assets/`: images that Astro optimizes at build time, such as Ahmed's headshot on About. Use `<Image>` from `astro:assets` for them.

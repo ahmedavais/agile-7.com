@@ -15,7 +15,8 @@
     "verify": "npm run check && npm test && npm run build && npm run sense",
     "deploy": "npm run build && wrangler deploy",
     "astro": "astro",
-    "sense": "vitest run --config vitest.sensors.config.ts"
+    "sense": "vitest run --config vitest.sensors.config.ts",
+    "watch-production": "vitest run --config vitest.live.config.ts"
   },
   "allowScripts": {
     "esbuild": true,
