@@ -29,7 +29,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - `npm run dev`: dev server at http://localhost:4321. Agents: `npx astro dev --background`, stop with `npx astro dev stop`.
 - `npm run verify`: typecheck + tests + build + sensors. Run before calling any change done; CI runs the same.
 - `npm run sense`: sensors in `sensors/` that check the built site in `dist/` (run after `npm run build`): every internal link and every `_redirects` target resolves to a built page or asset.
-- `npm run watch-production`: live checks against production (`SITE_URL` overrides the site): every sitemap page answers whole in the site shell, every old WordPress URL answers 301 to its new home, and the ahmedavais.com and Substack links answer.
+- `npm run watch-production`: live checks against production (`SITE_URL` overrides the site): every sitemap page answers whole in the site shell, every old WordPress URL answers 301 to its new home, and the ahmedavais.com links answer.
 - `npm run preview`: build and serve through wrangler, the same way production serves it.
 
 ## Layout
