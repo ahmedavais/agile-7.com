@@ -11,10 +11,22 @@ export function resolvesIn(link: string, builtFiles: Set<string>): boolean {
   return builtFiles.has(path) || builtFiles.has(`${path}.html`);
 }
 
-export function redirectTargets(redirects: string): string[] {
+export interface RedirectRule {
+  from: string;
+  to: string;
+}
+
+export function redirectRules(redirects: string): RedirectRule[] {
   return redirects
     .split('\n')
     .map((line) => line.trim())
     .filter((line) => line !== '' && !line.startsWith('#'))
-    .map((line) => line.split(/\s+/)[1]);
+    .map((line) => {
+      const [from, to] = line.split(/\s+/);
+      return { from, to };
+    });
+}
+
+export function redirectTargets(redirects: string): string[] {
+  return redirectRules(redirects).map((rule) => rule.to);
 }
