@@ -12,9 +12,10 @@
     "preview": "npm run build && wrangler dev",
     "check": "astro check",
     "test": "vitest run",
-    "verify": "npm run check && npm test && npm run build",
+    "verify": "npm run check && npm test && npm run build && npm run sense",
     "deploy": "npm run build && wrangler deploy",
-    "astro": "astro"
+    "astro": "astro",
+    "sense": "vitest run --config vitest.sensors.config.ts"
   },
   "allowScripts": {
     "esbuild": true,
