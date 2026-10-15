@@ -46,7 +46,7 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [x] A current headshot for About
 - [x] The year of the Dalian workshops, for the talks list
 - [x] Confirm the title of the 2017 Agile Indy talk
-- [ ] Refresh the "What shape is your team in?" screenshots once the tool says "Groupthink"
+- [x] Refresh the "What shape is your team in?" screenshots once the tool says "Groupthink"
 - [ ] Gather the rest of Ahmed's talks
 - [ ] Host talk decks on agile-7.com as PDFs from Ahmed's originals, so the links can't break (SlideShare and Sched return OK even for missing pages, so link checks can't catch rot)
 - [x] Check every internal link and redirect target in the built site
