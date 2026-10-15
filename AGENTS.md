@@ -27,7 +27,8 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 ## Commands
 
 - `npm run dev`: dev server at http://localhost:4321. Agents: `npx astro dev --background`, stop with `npx astro dev stop`.
-- `npm run verify`: typecheck + spelling + tests + build + sensors + browser sensors. Run before calling any change done; CI runs the same.
+- `npm run verify`: typecheck + lint + spelling + tests + build + sensors + browser sensors. Run before calling any change done; CI runs the same.
+- `npm run lint`: ESLint with type-aware TypeScript and Astro rules (`eslint.config.js`). Lint only, no formatter.
 - `npm run sense`: sensors in `sensors/` that check the built site in `dist/` (run after `npm run build`): every internal link and every `_redirects` target resolves to a built page or asset.
 - `npm run sense:browser`: Playwright in `sensors/browser/` opens every built page at 375px (touch) and 1280px, in light and dark mode, and fails on sideways scroll, console errors or serious accessibility problems (axe). Uses your Chrome locally; CI installs Chromium. Under Claude Code, its preview server runs with `CLAUDECODE` cleared, because Astro otherwise backgrounds itself and Playwright thinks the server died.
 - `npm run watch-production`: live checks against production (`SITE_URL` overrides the site): every sitemap page answers whole in the site shell, every old WordPress URL answers 301 to its new home, and the ahmedavais.com links answer.
