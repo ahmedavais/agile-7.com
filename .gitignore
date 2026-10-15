@@ -29,3 +29,7 @@ pnpm-debug.log*
 
 # personal notes, never committed
 private/
+
+# playwright output
+test-results/
+playwright-report/
