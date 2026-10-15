@@ -12,12 +12,13 @@
     "preview": "npm run build && wrangler dev",
     "check": "astro check",
     "test": "vitest run",
-    "verify": "npm run check && npm test && npm run build && npm run sense && npm run sense:browser",
+    "verify": "npm run check && npm run spell && npm test && npm run build && npm run sense && npm run sense:browser",
     "deploy": "npm run build && wrangler deploy",
     "astro": "astro",
     "sense": "vitest run --config vitest.sensors.config.ts",
     "watch-production": "vitest run --config vitest.live.config.ts",
-    "sense:browser": "playwright test"
+    "sense:browser": "playwright test",
+    "spell": "cspell --no-progress --no-summary"
   },
   "allowScripts": {
     "esbuild": true,
@@ -32,6 +33,7 @@
     "@astrojs/check": "^0.9.10",
     "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.64.1",
+    "cspell": "^10.4.0",
     "typescript": "^6.0.3",
     "vitest": "^5.0.3",
     "wrangler": "^4.146.0"
