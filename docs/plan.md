@@ -51,6 +51,8 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [ ] Host talk decks on agile-7.com as PDFs from Ahmed's originals, so the links can't break (SlideShare and Sched return OK even for missing pages, so link checks can't catch rot)
 - [x] Check every internal link and redirect target in the built site
 - [x] Watch production after each deploy and daily
+- [x] Check every page in a browser at phone and desktop widths, light and dark
+- [ ] Cache Playwright's browser in CI if the slower verify gets in the way
 - [ ] Review the production watch on 2026-11-14: were failures real or false alarms, does the daily 11:41 UTC run earn its keep, did GitHub's failure emails get noticed, and is any check missing or pure noise?
 
 ## Decisions
