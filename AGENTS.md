@@ -27,7 +27,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 ## Commands
 
 - `npm run dev`: dev server at http://localhost:4321. Agents: `npx astro dev --background`, stop with `npx astro dev stop`.
-- `npm run verify`: typecheck + tests + build + sensors + browser sensors. Run before calling any change done; CI runs the same.
+- `npm run verify`: typecheck + spelling + tests + build + sensors + browser sensors. Run before calling any change done; CI runs the same.
 - `npm run sense`: sensors in `sensors/` that check the built site in `dist/` (run after `npm run build`): every internal link and every `_redirects` target resolves to a built page or asset.
 - `npm run sense:browser`: Playwright in `sensors/browser/` opens every built page at 375px (touch) and 1280px, in light and dark mode, and fails on sideways scroll, console errors or serious accessibility problems (axe). Uses your Chrome locally; CI installs Chromium. Under Claude Code, its preview server runs with `CLAUDECODE` cleared, because Astro otherwise backgrounds itself and Playwright thinks the server died.
 - `npm run watch-production`: live checks against production (`SITE_URL` overrides the site): every sitemap page answers whole in the site shell, every old WordPress URL answers 301 to its new home, and the ahmedavais.com links answer.
@@ -53,7 +53,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 ## Conventions
 
 - The name: "Agile 7" in prose, page titles and anywhere it's read as a name (the company is Agile 7, Inc). "agile-7" only as the header wordmark and in the domain. Never "Agile-7".
-- Write in American English: organization, center, recognize, practiced, judgment. The audience is American.
+- Write in American English: organization, center, recognize, practiced, judgment. The audience is American. `npm run spell` (cspell, en-US, `cspell.json`) fails on British spellings and unknown words; add real names and terms to `words`, and British forms the en-US dictionary still accepts to `flagWords`.
 - Pages work at 375px wide and respect `prefers-color-scheme`.
 - Never commit secrets. Cloudflare credentials live only in GitHub Actions secrets.
 - After a visual change, check it in the browser at desktop and mobile widths; `npm run sense:browser` checks every page for sideways scroll, console errors and accessibility problems, not for how it looks.
