@@ -21,7 +21,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - Astro 7, fully static output (`dist/`).
 - Hosted as Cloudflare Worker static assets (`wrangler.jsonc`). No server code.
 - CI/CD: `.github/workflows/ci.yml`. PRs get a preview URL, `main` deploys to production.
-- Watch production: `.github/workflows/watch-production.yml` runs the live checks in `sensors/live/` after every deploy, daily and on demand. A failed run is the alarm (GitHub emails it); there's no issue tracker in the loop.
+- Watch production: `.github/workflows/watch-production.yml`, with steps shared from [karkhana](https://github.com/ahmedavais/karkhana), runs the live checks in `sensors/live/` after every deploy, daily and on demand. A failed run is the alarm (GitHub emails it); there's no issue tracker in the loop.
 - Same setup as ahmedavais.com. Follow its patterns unless there's a reason not to.
 - ahmedavais.com (`../ahmedavais.com`) has its own repo and its own session. Read it for patterns, but never change it from here; hand anything found there to Ahmed as a note to paste into that session.
 
