@@ -53,6 +53,15 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - Analytics: Cloudflare Web Analytics, switched on in the Cloudflare dashboard, which injects its own small script at the edge. Nothing in this repo adds it, and no other trackers belong on the site.
 - Fonts are self-hosted through Astro's font support (`fonts` in `astro.config.mjs`). Don't load fonts from third-party servers.
 
+## Writing
+
+Ahmed writes everything published under his name: posts, newsletter pieces, LinkedIn posts and page copy. Agents don't draft that prose.
+
+- Before the writing, agents help him understand the landscape and expand his thinking: research, questions, counterpoints and angles he hasn't considered.
+- Ahmed writes once (or records a voice memo and transcribes it) and edits once.
+- After the writing, agents check grammar, spelling and American English, and check facts against their source, such as the tool or the case notes. They fix a sentence; they don't replace it.
+- From a transcript, agents keep his words and only clean up what speech leaves behind: false starts, repeats and punctuation.
+
 ## Conventions
 
 - The name: "Agile 7" in prose, page titles and anywhere it's read as a name (the company is Agile 7, Inc). "agile-7" only as the header wordmark and in the domain. Never "Agile-7".
