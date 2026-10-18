@@ -14,6 +14,14 @@ export default tseslint.config(
     languageOptions: { parserOptions: { projectService: true, tsconfigRootDir: import.meta.dirname } },
   },
   {
+    rules: {
+      'max-params': ['error', 3],
+      complexity: ['error', 10],
+      'max-depth': ['error', 4],
+      'max-lines-per-function': ['warn', { max: 30 }],
+    },
+  },
+  {
     files: ['*.config.{js,mjs}'],
     languageOptions: { globals: globals.node },
   },

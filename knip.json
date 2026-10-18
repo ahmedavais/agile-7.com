@@ -1,0 +1,5 @@
+{
+  "entry": ["sensors/**/*.test.ts"],
+  "ignore": ["playground/**"],
+  "ignoreDependencies": ["ts-morph"]
+}
