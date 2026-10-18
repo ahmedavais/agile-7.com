@@ -10,6 +10,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  duplication:
+    uses: ahmedavais/karkhana/.github/workflows/duplication.yml@main
+
   verify:
     runs-on: ubuntu-latest
     steps:
