@@ -8,6 +8,7 @@ const SITE = process.env.SITE_URL ?? 'https://agile-7.com';
 const OWNED_PLACES = [
   'https://ahmedavais.com/',
   'https://ahmedavais.com/p/team-shape',
+  'https://ahmedavais.com/p/stop-starting',
 ];
 const PATIENCE_MS = 15_000;
 

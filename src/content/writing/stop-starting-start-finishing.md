@@ -15,7 +15,7 @@ Nobody wanted it this way. There's always more to do than there's capacity for, 
 
 [Stop starting, start finishing](https://ahmedavais.com/p/stop-starting) puts two teams of three side by side on the same backlog, item for item. One team finishes what it has before it picks up anything new. The other keeps starting, up to a limit you set with a slider.
 
-![A week into one race.](./images/stop-starting-day-7.png)
+![The race on day 7. The team that finishes first, up to 3 items at once, has 5 items done in about 4 days each. The team that starts everything, up to 9 at once, has 9 items in progress and nothing done yet.](./images/stop-starting-day-7.png)
 
 Let it run for a bit before you touch anything. Then move the slider and race again. Try a few limits and see where the busy team starts to fall behind.
 
