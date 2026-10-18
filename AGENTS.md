@@ -21,6 +21,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - Astro 7, fully static output (`dist/`).
 - Hosted as Cloudflare Worker static assets (`wrangler.jsonc`). No server code.
 - CI/CD: `.github/workflows/ci.yml`. PRs get a preview URL, `main` deploys to production.
+- Duplication: the `duplication` job in `.github/workflows/ci.yml`, shared from [karkhana](https://github.com/ahmedavais/karkhana), fails when a change adds code duplicated elsewhere in the repo, tests included. `.jscpd.json` skips `package-lock.json`.
 - Adversarial review: `.github/workflows/adversarial-review.yml` has Claude Code review every PR with the shared workflow and brief from [karkhana](https://github.com/ahmedavais/karkhana). Comments only. The reviewer takes this repo's checks and conventions from this file, so keep them current here.
 - Watch production: `.github/workflows/watch-production.yml`, with steps shared from [karkhana](https://github.com/ahmedavais/karkhana), runs the live checks in `sensors/live/` after every deploy, daily and on demand. A failed run is the alarm (GitHub emails it); there's no issue tracker in the loop.
 - Same setup as ahmedavais.com. Follow its patterns unless there's a reason not to.

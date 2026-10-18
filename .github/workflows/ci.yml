@@ -10,6 +10,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  duplication:
+    uses: ahmedavais/karkhana/.github/workflows/duplication.yml@main
+
   verify:
     runs-on: ubuntu-latest
     steps:
@@ -64,7 +67,7 @@ jobs:
 
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: verify
+    needs: [verify, duplication]
     runs-on: ubuntu-latest
     environment: production
     steps:
