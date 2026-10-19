@@ -3,7 +3,7 @@ import { newestFirst } from './newest-first';
 
 const postFrom = (title: string, date: string) => ({ data: { title, date: new Date(date) } });
 
-describe('newestFirst', () => {
+describe('newestFirst ordering a reading list', () => {
   it('has nothing to read when there are no posts', () => {
     const posts: never[] = [];
 
@@ -27,7 +27,9 @@ describe('newestFirst', () => {
       'Beginning and Ending with Gratitude',
     ]);
   });
+});
 
+describe('newestFirst on the posts it is given', () => {
   it('leaves the original posts in their order', () => {
     const posts = [postFrom('Older', '2020-04-18'), postFrom('Newer', '2020-07-24')];
 
