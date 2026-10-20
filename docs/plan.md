@@ -48,6 +48,7 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [x] Confirm the title of the 2017 Agile Indy talk
 - [x] Refresh the "What shape is your team in?" screenshots once the tool says "Groupthink"
 - [ ] Gather the rest of Ahmed's talks
+- [ ] Watch the guest recordings again on YouTube and add the keepers to Talks and sessions with their links (candidates in private notes)
 - [ ] Revise the older talk decks with what Ahmed knows now (his own pace; originals are listed in private notes)
 - [x] Check every internal link and redirect target in the built site
 - [x] Watch production after each deploy and daily
@@ -62,6 +63,7 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - The newsletter is Dynamical Change on Substack (ahmedavais.substack.com), free for now; revisit a paid tier only with evidence such as a steady rhythm and readers asking for more. Posts can appear on both Substack and agile-7.com; the copy on agile-7.com sets `canonical` to wherever the piece first appeared. If Substack ever needs a sender address, use a PO box or virtual mailbox, never a home address. Pledges stay off and the header above every post stays empty: no asks for money while it's free, and readers get straight to the piece. The email banner (1100×220) shows the mark, the name and Ahmed's byline.
 - One new piece per weekend, alternating: a Dynamical Change piece on an ahmedavais.com tool (on Substack, with a copy here), then a new agile-7.com original. The originals keep adding proof of Ahmed's work alongside the newsletter copies.
 - Talk decks stay on SlideShare (https://www.slideshare.net/aavais) instead of being hosted here. SlideShare answers OK even for missing pages, so the sensors can't catch a dead deck; that's accepted. Talks from the 2023 AgileIndy sessions stay as plain text: their Sched pages were Project Brilliant listings and may not last.
+- No Watch section for now. Ahmed's older video is mostly five or more years old and aimed at agile coaches; his guest recordings are proof of speaking, so the best ones join Talks and sessions as YouTube links. Revisit when there's current video worth leading with.
 - Keep Cloudflare Web Analytics, which Cloudflare injects on every page because it's turned on for the domain. It's cookieless and free, and it answers whether people read the proof and where they came from. Ad and tracker blockers hide many engineers, so read it as a minimum and a trend, not a total. Revisit after a few months.
 - A failed production-watch run is the alarm, emailed by GitHub. No issue tracker in the loop, so alarms don't turn into another backlog.
 - Other sites' links stay unchecked, except ahmedavais.com. LinkedIn and Substack block bots (Substack answers GitHub's runners with 403, whether or not the post exists), and SlideShare answers OK even for missing pages.
