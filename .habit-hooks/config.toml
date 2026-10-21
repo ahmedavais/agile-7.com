@@ -2,3 +2,11 @@ plugins = ["typescript", "generic"]
 
 [sensors.jscpd]
 disabled = true
+
+[smells."karkhana/max-lines-per-function"]
+severity = "enforced"
+guide = "oversized-function.md"
+
+[smells."karkhana/max-lines-per-describe"]
+severity = "enforced"
+guide = "oversized-describe.md"
