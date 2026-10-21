@@ -85,3 +85,10 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+  failed-update-alarm:
+    needs: [duplication, verify, preview]
+    if: failure()
+    permissions:
+      pull-requests: write
+    uses: ahmedavais/karkhana/.github/workflows/failed-update-alarm.yml@main
