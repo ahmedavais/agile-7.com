@@ -65,6 +65,7 @@ Ahmed writes everything published under his name: posts, newsletter pieces and p
 - Ahmed writes once (or records a voice memo and transcribes it) and edits once.
 - After the writing, agents check grammar, spelling and American English, and check facts against their source, such as the tool or the case notes. They fix a sentence; they don't replace it.
 - From a transcript, agents keep his words and only clean up what speech leaves behind: false starts, repeats and punctuation.
+- Sources are linked inline, where they're used. A Sources list at the end only for pieces that rest on studies with numbers, such as "The AI productivity trap", so a reader checking the numbers finds them in one place. Never list Ahmed's own work there; the body already links it.
 - LinkedIn posts are the exception: agents may draft the bones of a post, meaning its structure and sentences lifted from the piece it announces, which Ahmed wrote. He edits before posting.
 - These rules are a work in progress. Ahmed adjusts them as he learns what works; follow the latest version.
 
