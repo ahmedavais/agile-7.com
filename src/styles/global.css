@@ -114,6 +114,38 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
   .flow-diagram li + li::before { content: '→' / ''; top: 0; left: -28px; }
 }
 
+.chart { margin: 32px 0; padding: 20px; background: var(--diagram-bg); border-left: 3px solid var(--brand-teal); font-family: var(--font-sans); font-size: 14px; line-height: 1.4; }
+.chart figcaption { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; }
+.chart-title { font-weight: 600; font-size: 16px; }
+.chart-note, .chart-source { color: var(--muted); font-size: 13px; }
+.chart-source { margin: 16px 0 0; }
+.bar-chart ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.bar-chart li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; }
+.bar-label { grid-area: label; }
+.bar-value { grid-area: value; font-variant-numeric: tabular-nums; }
+.bar-track { grid-area: track; order: 1; flex-basis: 100%; position: relative; height: 14px; }
+.bar-track::before { content: ''; position: absolute; left: var(--zero); top: -3px; bottom: -3px; border-left: 1px solid var(--muted); }
+.bar { position: absolute; top: 0; bottom: 0; border-radius: 2px; background: color-mix(in srgb, var(--muted) 45%, var(--diagram-bg)); }
+.bar-chart .highlight .bar { background: var(--accent); }
+.bar-chart .highlight .bar-label, .bar-chart .highlight .bar-value { font-weight: 600; }
+.spectrum ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.spectrum li { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; }
+.spectrum li.highlight { border: 2px solid var(--accent); }
+.spectrum-name { font-weight: 600; }
+.spectrum-point { color: var(--muted); font-size: 13px; }
+.spectrum li.highlight .spectrum-point { color: var(--fg); }
+.spectrum-ends { display: flex; justify-content: space-between; margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+.spectrum-ends span:first-child::before { content: '↑ ' / ''; }
+.spectrum-ends span:last-child::after { content: ' ↓' / ''; }
+@media (min-width: 640px) {
+  .bar-chart li { display: grid; grid-template-columns: 200px 1fr 170px; grid-template-areas: 'label track value'; align-items: center; }
+  .bar-track { order: 0; }
+  .spectrum ol { flex-direction: row; }
+  .spectrum li { flex: 1; }
+  .spectrum-ends span:first-child::before { content: '← ' / ''; }
+  .spectrum-ends span:last-child::after { content: ' →' / ''; }
+}
+
 .prose h3 { font-family: var(--font-mono); font-size: 15px; font-weight: 500; color: var(--accent); margin: 28px 0 0; }
 .prose h3 + p { margin-top: 4px; }
 .talks li { margin-bottom: 6px; }
