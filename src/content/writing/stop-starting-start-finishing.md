@@ -1,6 +1,6 @@
 ---
 title: Stop starting, start finishing
-summary: Two teams, same people, same work. Watch what happens.
+summary: Two teams, same people, same work. Watch what happens when a team is working on everything and finishing very little.
 date: 2026-10-18
 canonical: https://ahmedavais.substack.com/p/stop-starting-start-finishing
 ---
