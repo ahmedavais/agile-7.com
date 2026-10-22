@@ -65,7 +65,7 @@ Ahmed writes everything published under his name: posts, newsletter pieces and p
 - Ahmed writes once (or records a voice memo and transcribes it) and edits once.
 - After the writing, agents check grammar, spelling and American English, and check facts against their source, such as the tool or the case notes. They fix a sentence; they don't replace it.
 - From a transcript, agents keep his words and only clean up what speech leaves behind: false starts, repeats and punctuation.
-- LinkedIn posts are the exception: agents may draft the bones from Ahmed's own published words, and he edits before posting.
+- LinkedIn posts are the exception: agents may draft the bones of a post, meaning its structure and sentences lifted from the piece it announces, which Ahmed wrote. He edits before posting.
 - These rules are a work in progress. Ahmed adjusts them as he learns what works; follow the latest version.
 
 ## Conventions
