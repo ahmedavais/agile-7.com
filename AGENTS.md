@@ -59,7 +59,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 
 ## Writing
 
-Ahmed writes everything published under his name: posts, newsletter pieces, LinkedIn posts and page copy. Agents don't draft that prose.
+Ahmed writes everything published under his name: posts, newsletter pieces and page copy. Agents don't draft that prose. LinkedIn posts work differently (below).
 
 - Before the writing, agents help him understand the landscape and expand his thinking: research, questions, counterpoints and angles he hasn't considered.
 - Ahmed writes once (or records a voice memo and transcribes it) and edits once.
