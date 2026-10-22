@@ -1,0 +1,39 @@
+---
+import { barLayout } from '../lib/bar-layout';
+
+interface Row {
+  label: string;
+  value: number;
+  shown: string;
+  highlight?: boolean;
+}
+
+interface Props {
+  title: string;
+  note: string;
+  source: string;
+  rows: Row[];
+}
+
+const { title, note, source, rows } = Astro.props;
+const { zero, bars } = barLayout(rows.map((row) => row.value));
+---
+
+<figure class="chart bar-chart" style={`--zero: ${zero}%`}>
+  <figcaption>
+    <span class="chart-title">{title}</span>
+    <span class="chart-note">{note}</span>
+  </figcaption>
+  <ul>
+    {rows.map((row, index) => (
+      <li class:list={{ highlight: row.highlight }}>
+        <span class="bar-label">{row.label}</span>
+        <span class="bar-track" aria-hidden="true">
+          <span class="bar" style={`left: ${bars.at(index)?.start}%; width: ${bars.at(index)?.length}%`} />
+        </span>
+        <span class="bar-value">{row.shown}</span>
+      </li>
+    ))}
+  </ul>
+  <p class="chart-source">{source}</p>
+</figure>

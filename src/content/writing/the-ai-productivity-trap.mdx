@@ -1,0 +1,151 @@
+---
+title: The AI productivity trap
+summary: AI agents can produce more code than ever, but are customers getting value any faster?
+date: 2026-10-21
+---
+
+import BarChart from '../../components/BarChart.astro';
+import Spectrum from '../../components/Spectrum.astro';
+
+If you run retros with teams that lean hard on AI agents, these sticky notes might look familiar: “my head hurts,” “feeling exhausted at the end of the day,” “brain fried by 3pm.” I keep seeing them, and often from teams doing spec-driven development well.
+
+Engineers on those teams are doing more thinking, more planning and more reviewing than ever. And to make things worse, while the agents are running, there’s a tendency to pick up something else to stay productive. That means more context switching and more mental exhaustion.
+
+Meanwhile, the dashboards look great. More code, more pull requests, more of everything. So here’s the question I keep coming back to: are customers getting value any faster?
+
+## More code, same customer
+
+AI agents are very good at one part of the work: getting code written. They help far less with what comes after it, like review, testing, deploying and learning from users. DORA’s qualitative research says the gains stall because AI has [mostly targeted the inner loop](https://dora.dev/insights/balancing-ai-tensions/), the part customers never see.
+
+<BarChart
+  title="Pull requests nearly doubled, but company delivery did not move"
+  note="Change in high-AI-adoption teams, % (Faros AI telemetry, 10,000 developers, 2025)"
+  source="Faros AI, The AI Productivity Paradox (2025): 10,000 developers, 1,255 teams"
+  rows={[
+    { label: 'Pull requests merged', value: 98, shown: '+98%' },
+    { label: 'Pull request review time', value: 91, shown: '+91%' },
+    { label: 'Pull request size', value: 154, shown: '+154%' },
+    { label: 'Company-level delivery metrics', value: 0, shown: 'no measurable improvement', highlight: true },
+  ]}
+/>
+
+Faros AI, a company that sells engineering-analytics software, looked at telemetry from 10,000 developers across 1,255 teams. Teams merged far more pull requests, but reviews took longer, pull requests got much bigger, and delivery metrics at the company level [didn’t measurably improve](https://faros.ai/research). It’s vendor research, so keep that in mind. Still, [DORA’s 2025 survey](https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report) of nearly 5,000 people points the same way: throughput is up, and so is instability.
+
+DORA’s headline is that AI is an amplifier. It makes good teams better and struggling teams worse, faster. I’ve watched the second half happen: an agent will happily copy and paste the bad patterns that were already sitting in the code base.
+
+There’s another split worth naming. For prototypes and working demos, AI is close to zero friction. For production, the work is more mentally taxing than it used to be. Same tool, very different day.
+
+## The numbers I’ve stopped trusting
+
+We’re a remote company, so nobody stops by my desk. But some of you have VPs who stop by, or swoop by like seagulls, with one question: how much faster are we with AI? They’ve read about 2x to 10x gains, and they want a clear number.
+
+It’s hard to give one. We have stories. A couple of engineers finished an admin flow in two days that they figured would normally take five. The two days happened. The five is a guess, and guesses like that tend to run high.
+
+In METR’s 2025 trial, experienced developers expected AI to speed them up. It slowed them down, and they still believed it had sped them up:
+
+<BarChart
+  title="Developers felt 20% faster with AI but were measured 19% slower"
+  note="METR randomized trial, 16 experienced open-source developers, 246 tasks, early 2025"
+  source="METR, Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity (July 2025)"
+  rows={[
+    { label: 'Expected beforehand', value: 24, shown: '24% faster' },
+    { label: 'Believed afterward', value: 20, shown: '20% faster' },
+    { label: 'Measured', value: -19, shown: '19% slower', highlight: true },
+  ]}
+/>
+
+Those were [early-2025 tools](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/), and METR has since marked the result out of date. Its 2026 follow-up broke for a telling reason: [many developers no longer wanted to work without AI](https://particula.tech/blog/metr-reversed-19-percent-slower-ai-coding-study), even for a study. METR’s [newer survey](https://evals.alignment.org/blog/2026-05-11-ai-usage-survey/) shows the gap in another form. People report a median 3x speedup, but only 1.4 to 2x more value.
+
+Here’s where I’ve landed on our usual numbers:
+
+- **Lines of code.** I never trusted it to begin with.
+- **Story points.** It’s weird to even find a use for them in the age of AI.
+- **Velocity.** It doesn’t paint the whole picture when prototypes are nearly free and production work is harder than ever.
+- **PR counts.** A slippery slope to gaming. Write a skill that opens as many PRs as possible and you could set a Guinness World Record, as long as you’ve got deep pockets and tokens to burn.
+- **Cycle time.** Still useful.
+- **Deployment frequency.** Multiple times a day, or any time, still says a lot about CI/CD maturity.
+
+The two I still trust measure how work flows to customers, not how much of it we make.
+
+## Two kinds of tired
+
+Back to those sticky notes. Not all exhaustion is the same, and engineers I talk with describe two kinds.
+
+**Happy exhausted** is the end of a day with a successful deployment to production, a feature delivered, a workflow that worked. Something to be proud of.
+
+**Unhappy exhausted** is an endless round of the agent questioning you, chasing thoroughness and asking about things that don’t need asking yet. The agent went down rabbit holes, copied bad patterns from the code base, created a mess and faked tests. And nothing shipped.
+
+In 2024, I wrote about [reducing cognitive load in software teams](https://flexion.us/blog/navigating-reducing-cognitive-load/). Rereading it now, the human parts still hold. Working memory holds about four things at a time. And cognitive load theory splits load into kinds: the load of the problem itself, the load that builds toward something, and the extraneous load that just gets in the way. A happy exhausted day is full of the useful kind. An unhappy exhausted day is full of the extraneous kind, with nothing to show for it.
+
+In 2026, BCG researchers gave the extraneous kind a name: [AI brain fry](https://the-decoder.com/study-warns-of-ai-brain-fry-as-workers-hit-cognitive-limits-overseeing-ai-agents/). In their survey, 14% of AI users said they’d felt it. The strongest driver wasn’t using AI. It was overseeing it: reviewing, correcting and interpreting what it produced.
+
+<BarChart
+  title="Heavy AI oversight brings up to 19% more strain"
+  note="Workers with high vs. low AI oversight demands, % more (BCG survey of 1,488 US workers, 2026)"
+  source="BCG, AI brain fry study (HBR, March 2026), via The Decoder and Silicon UK"
+  rows={[
+    { label: 'Mental effort', value: 14, shown: '+14%', highlight: true },
+    { label: 'Mental fatigue', value: 12, shown: '+12%', highlight: true },
+    { label: 'Information overload', value: 19, shown: '+19%', highlight: true },
+  ]}
+/>
+
+Those affected [reported more major errors and more decision fatigue](https://the-decoder.com/study-warns-of-ai-brain-fry-as-workers-hit-cognitive-limits-overseeing-ai-agents/), and were [more likely to want to quit](https://www.silicon.co.uk/ai-2/ai-brain-fry-629909/amp). Their self-reported productivity rose with up to three AI tools and fell with four or more. It’s hard to miss the echo of that four-item working memory, though nobody has shown one explains the other. The data is self-reported, and BCG advises companies on AI. But it matches what engineers keep telling me.
+
+## Smaller teams, eyes outside the loop
+
+In that 2024 piece, a teammate put it well: more people can reduce load, but managing larger groups can increase it. That still holds, but the math has changed. Mob programming made sense when everyone was learning together and the code passed through everyone’s hands. It’s hard to justify four people staring at an agent’s screen.
+
+The other extreme is just as risky. One person with an agent mostly doubles down on that person’s own thinking. If you’re not careful, it amplifies your biases. And most of us are not careful.
+
+<Spectrum
+  title="Two or three people working with agents is the sweet spot"
+  source="Team size working with AI agents · from my own teams’ experience"
+  from="fewer people"
+  to="more people"
+  options={[
+    { name: 'One person + an agent', points: ['No one outside the loop', 'Amplifies your own biases'] },
+    { name: 'Two or three + agents', points: ['Someone spots the minefield', 'The sweet spot, for now'], highlight: true },
+    { name: 'A mob of four or more', points: ['Everyone watches one agent', 'Hard to justify the cost'] },
+  ]}
+/>
+
+Our new sweet spot is two or three people, sometimes just two, working with agents. Small enough that nobody is a spectator, big enough that someone is outside the loop.
+
+Daniel Kahneman made a related point near the end of *Thinking, Fast and Slow*. Organizations [avoid errors better than individuals](https://www.leadershipnow.com/leadingblog/2011/12/what_can_be_done_about_biases.html) because they slow down and follow orderly procedures. It’s also easier to spot a minefield when you watch someone else walk toward it than when you’re the one walking.
+
+Agents need eyes outside the loop too. Birgitta Böckeler at Thoughtworks [tested agents doing TDD inside their own loop](https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html) and found no clear quality difference, at roughly 3 to 8 times the tokens. When the agent writes the test and confirms it fails, a red test only proves the agent saw a failure, not that it failed for the right reason. Her advice is to check outcomes outside the loop, with tools like mutation testing and static analysis. Hello, faked tests.
+
+Here’s what one team came up with, rough as it is:
+
+- **Start an agent, take a break.** Not “start an agent, start something else.” [Stop starting, start finishing](/writing/stop-starting-start-finishing) applies to people’s attention too.
+- **Identify which stories don’t have existing patterns.**
+- **Plan to improve the new patterns introduced,** before agents copy them everywhere. That’s the idea behind [Every bug teaches the system](/writing/every-bug-teaches-the-system).
+
+## If you lead the team
+
+The next time a seagull swoops in asking how much faster you are, try answering a better question: are customers getting value faster, and how are the people doing the work holding up?
+
+A few things I’d keep in mind:
+
+- **If good old deterministic automation can do it, do it.** Having a power tool doesn’t mean you use it for everything. Scripts, pipelines and checks don’t wander down rabbit holes. Software discipline and know-how, especially from extreme programming, still matter.
+- **Work is shifting, not disappearing.** Once you’ve felt a productivity gain and solved today’s problems, you’ll find a whole new set of harder ones. Pace yourself.
+- **Don’t forget the human behind the screen.** Don’t dump a million code reviews on your human in the loop. In *Badass: Making Users Awesome*, Kathy Sierra argued for [making a better user, not just a better product](https://boingboing.net/2015/02/27/kathy-sierras-badass-how-to.html): don’t make a better camera, make a better photographer. The same goes here. BCG found brain fry dropped when [managers provided training and support](https://www.fortune.com/2026/03/10/ai-brain-fry-workplace-productivity-bcg-study).
+
+If you want something to try on Monday, add one question to your next retro: was this week happy exhausted or unhappy exhausted? Then look at what the unhappy days have in common.
+
+I’d like to hear what you see on your own teams.
+
+## Sources
+
+- METR, [Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) (July 2025)
+- METR’s February 2026 redesign post, via [Particula](https://particula.tech/blog/metr-reversed-19-percent-slower-ai-coding-study)
+- METR, [Self-Reported Impact of Early-2026 AI on Technical Worker Productivity](https://evals.alignment.org/blog/2026-05-11-ai-usage-survey/) (May 2026)
+- Google Cloud, [2025 DORA report announcement](https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report)
+- DORA, [Balancing AI tensions](https://dora.dev/insights/balancing-ai-tensions/)
+- Faros AI, [research reports](https://faros.ai/research) (vendor research)
+- BCG brain fry study, via [The Decoder](https://the-decoder.com/study-warns-of-ai-brain-fry-as-workers-hit-cognitive-limits-overseeing-ai-agents/), [Silicon UK](https://www.silicon.co.uk/ai-2/ai-brain-fry-629909/amp) and [Fortune](https://www.fortune.com/2026/03/10/ai-brain-fry-workplace-productivity-bcg-study)
+- Ahmed Avais, [Reducing cognitive load](https://flexion.us/blog/navigating-reducing-cognitive-load/) (October 2024)
+- Birgitta Böckeler, [TDD inside the agent loop: theater or actual value?](https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html)
+- Daniel Kahneman, *Thinking, Fast and Slow* (2011), excerpt via [Leading Blog](https://www.leadershipnow.com/leadingblog/2011/12/what_can_be_done_about_biases.html)
+- Kathy Sierra, *Badass: Making Users Awesome* (2015), via [Boing Boing](https://boingboing.net/2015/02/27/kathy-sierras-badass-how-to.html)
