@@ -12,7 +12,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - One ask on every page: "let's talk". It covers consulting, speaking and other conversations without naming a specific path.
 - AI is the current chapter, not the brand. The brand is systems and complexity; AI shows up as current proof (the newest writing, About's "Teams and AI", the AI topic on Let's talk), never in taglines on its own.
 - Topics: team health, change management, AI-era teamwork, executive development, agile games, XP and TDD. Scrum Master work is out of scope.
-- Never name Ahmed's current employer. Describe current work generically ("my teams"); the employer is not a hook for consulting.
+- Never name Ahmed's current or past employers, to the best of our ability. Describe the work generically ("my teams", "teams in finance"); an employer is not a hook for consulting. A link to his own writing on a former employer's site is fine; the link text names the piece, not the company.
 - ahmedavais.com gets a quiet link, not a feature.
 - The 2020 blog posts stay, with their old WordPress URLs redirected. Everything else from the old site is raw material, not something to preserve.
 
