@@ -1,4 +1,4 @@
-export interface Bar {
+interface Bar {
   start: number;
   length: number;
 }
