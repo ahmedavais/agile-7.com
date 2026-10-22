@@ -18,14 +18,17 @@ const { title, source, options, from, to } = Astro.props;
 
 <figure class="chart spectrum">
   <figcaption><span class="chart-title">{title}</span></figcaption>
-  <ol>
-    {options.map((option) => (
-      <li class:list={{ highlight: option.highlight }}>
-        <span class="spectrum-name">{option.name}</span>
-        {option.points.map((point) => <span class="spectrum-point">{point}</span>)}
-      </li>
-    ))}
-  </ol>
-  <p class="spectrum-ends"><span>{from}</span><span>{to}</span></p>
+  <div class="spectrum-scale">
+    <p class="spectrum-from">{from}</p>
+    <ol>
+      {options.map((option) => (
+        <li class:list={{ highlight: option.highlight }}>
+          <span class="spectrum-name">{option.name}</span>
+          {option.points.map((point) => <span class="spectrum-point">{point}</span>)}
+        </li>
+      ))}
+    </ol>
+    <p class="spectrum-to">{to}</p>
+  </div>
   <p class="chart-source">{source}</p>
 </figure>
