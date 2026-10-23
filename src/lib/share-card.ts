@@ -11,6 +11,7 @@ export interface ShareCard {
 }
 
 const require = createRequire(import.meta.url);
+const LONGEST_LARGE_TITLE = 60;
 const WIDTH = 1200;
 const HEIGHT = 630;
 const COLORS = { background: '#fbfaf7', text: '#1f1d1a', muted: '#57524a', accent: '#277773', brandTeal: '#43c1bb' };
@@ -35,7 +36,7 @@ function cardLayout({ section, title }: ShareCard, mark: string) {
       box({ fontFamily: 'IBM Plex Mono', fontWeight: 500, fontSize: 28, color: COLORS.accent }, 'agile-7'),
     ]),
     box({ marginTop: 56, fontFamily: 'IBM Plex Mono', fontWeight: 500, fontSize: 24, color: COLORS.muted }, section),
-    box({ marginTop: 12, flexGrow: 1, fontFamily: 'Newsreader', fontSize: 84, lineHeight: 1.08, letterSpacing: '-0.01em' }, title),
+    box({ marginTop: 12, flexGrow: 1, fontFamily: 'Newsreader', fontSize: titleSize(title), lineHeight: 1.08, letterSpacing: '-0.01em' }, title),
     box({ justifyContent: 'space-between', borderTop: `5px solid ${COLORS.brandTeal}`, paddingTop: 24, fontSize: 24, color: COLORS.muted }, [
       box({ fontWeight: 600, color: COLORS.text }, 'Ahmed Avais'),
       box({}, 'agile-7.com'),
@@ -56,4 +57,8 @@ async function cardFonts(): Promise<Font[]> {
     font('Inter', require.resolve('@fontsource/inter/files/inter-latin-600-normal.woff'), 600),
     font('IBM Plex Mono', require.resolve('@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff'), 500),
   ]);
+}
+
+export function titleSize(title: string): number {
+  return title.length <= LONGEST_LARGE_TITLE ? 84 : 64;
 }
