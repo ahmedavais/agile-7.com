@@ -7,11 +7,11 @@ The first public version of agile-7.com. Purpose and audience live in [AGENTS.md
 - Home: one line on 25 years of learning how systems behave (machines, teams, AI), the current point of view, latest writing, and the ask.
 - About (`/about`): the systems story in prose. Links to LinkedIn for the chronology and a quiet link to ahmedavais.com.
 - Writing (`/writing`, posts at `/writing/<slug>`): the 2020 posts and new ones. agile-7.com stays the canonical home for writing.
-- Let's talk (`/contact`): the kinds of conversation (consulting, speaking, 1:1 development, agile games), talks given, and email.
+- About also lists the talks given. The Let's talk page (`/contact`) was retired in October 2026 and redirects to About; nobody used it.
 
 - Work (`/work`, case studies at `/work/<slug>`): stories from engagements, with the setbacks left in. Clients stay unnamed.
 
-Every page ends with the same ask: let's talk.
+Every page ends with the same ask: compare notes, on LinkedIn or by email.
 
 ## Design direction
 
@@ -60,6 +60,7 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 
 ## Decisions
 
+- Every page ends with an invitation to compare notes, pointing at LinkedIn first and then email, instead of "let's talk" and a contact page (October 2026). Nobody reached out through the old ask, and comparing notes suits both readers the site now serves: leaders weighing consulting and leaders hiring. The talks moved to About.
 - The newsletter is Dynamical Change on Substack (ahmedavais.substack.com), free for now; revisit a paid tier only with evidence such as a steady rhythm and readers asking for more. Posts can appear on both Substack and agile-7.com; the copy on agile-7.com sets `canonical` to wherever the piece first appeared. If Substack ever needs a sender address, use a PO box or virtual mailbox, never a home address. Pledges stay off and the header above every post stays empty: no asks for money while it's free, and readers get straight to the piece. The email banner (1100×220) shows the mark, the name and Ahmed's byline.
 - One new piece per weekend, alternating: a Dynamical Change piece on an ahmedavais.com tool (on Substack, with a copy here), then a new agile-7.com original. The originals keep adding proof of Ahmed's work alongside the newsletter copies.
 - Talk decks stay on SlideShare (https://www.slideshare.net/aavais) instead of being hosted here. SlideShare answers OK even for missing pages, so the sensors can't catch a dead deck; that's accepted. Talks from the 2023 AgileIndy sessions stay as plain text: their Sched pages were Project Brilliant listings and may not last.

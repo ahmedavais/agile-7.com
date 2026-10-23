@@ -60,6 +60,8 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
 
 .site-footer { margin-top: 80px; border-top: 1px solid var(--line); padding: 8px 0 40px; }
 .ask h2 { margin-top: 28px; }
+.ask-ways { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 20px; font-family: var(--font-mono); font-size: 15px; }
+.ask-ways a:not(.ask-button) { color: var(--accent); }
 .ask-button {
   display: inline-block;
   font-family: var(--font-mono);

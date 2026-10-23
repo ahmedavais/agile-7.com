@@ -1,18 +1,18 @@
 # agile-7.com
 
 Ahmed Avais's site for Agile 7. It used to be a WordPress blog and services site; this is the rebuild.
-The site has Home, Work, About, Writing and Let's talk; `docs/plan.md` tracks what's left.
+The site has Home, Work, About and Writing; `docs/plan.md` tracks what's left.
 
 ## Purpose
 
-agile-7.com shows engineering leaders what Ahmed has done and can do: build healthy teams, make change stick and lead well in complex systems. People who hear about him can see the proof and reach out for consulting, speaking or 1:1 leadership development.
+agile-7.com shows engineering leaders what Ahmed has done and can do: build healthy teams, make change stick and lead well in complex systems. People who hear about him can see the proof, whether they're weighing a consulting engagement, a talk, 1:1 leadership development or hiring him into a leadership role. The site doesn't announce a job search.
 
 - Proof over pitch. Work has always come through people who knew Ahmed, so the site backs up a name someone already heard. Show real work and outcomes; avoid service menus and modest labels like "facilitator".
 - Engineering leaders come first. Agile coaches and change-minded people are welcome readers but not the target.
-- One ask on every page: "let's talk". It covers consulting, speaking and other conversations without naming a specific path.
-- AI is the current chapter, not the brand. The brand is systems and complexity; AI shows up as current proof (the newest writing, About's "Teams and AI", the AI topic on Let's talk), never in taglines on its own.
+- One ask on every page: compare notes. It's an invitation between peers, not a sales pitch, and it points at LinkedIn first, where conversations actually start, then email. There's no contact page or services menu; nobody used them.
+- AI is the current chapter, not the brand. The brand is systems and complexity; AI shows up as current proof (the newest writing, About's "Teams and AI"), never in taglines on its own.
 - Topics: team health, change management, AI-era teamwork, executive development, agile games, XP and TDD. Scrum Master work is out of scope.
-- Never name Ahmed's current or past employers, to the best of our ability. Describe the work generically ("my teams", "teams in finance"); an employer is not a hook for consulting. A link to his own writing on a former employer's site is fine; the link text names the piece, not the company.
+- Never name Ahmed's current or past employers, to the best of our ability. Describe the work generically ("teams I work with", "teams in finance"), and keep current work from pointing at one workplace: no "my team" or "we're a remote company"; an employer is not a hook for consulting. A link to his own writing on a former employer's site is fine; the link text names the piece, not the company.
 - ahmedavais.com gets a quiet link, not a feature.
 - The 2020 blog posts stay, with their old WordPress URLs redirected. Everything else from the old site is raw material, not something to preserve.
 
@@ -48,7 +48,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - `public/_redirects`: 301s from old WordPress URLs to their new home. Cloudflare applies it before serving assets. `npm run sense` fails if a target doesn't exist.
 - `src/lib/`: pure logic (`newestFirst` orders both Writing and Work; `publicPath` turns a built page like `/about.html` into its public URL `/about`, used for canonical links; `site-links` finds a page's internal links and redirect targets and checks them against the built files, used by the sensors; `live-checks` reads the live sitemap and recognizes a whole page in the site shell, used by the production watch; `bar-layout` places each bar of a `BarChart` relative to a zero line; `page-meta` reads a built page's meta description and link-preview image, used by the sensors; `share-card` draws a post's or case study's link-preview card and names its path), with `*.test.ts` next to it (vitest). Pages only render.
 - `src/layouts/Base.astro`: shared shell for every page: head, header, footer.
-- `src/components/`: pieces of the shell. `SiteFooter` carries the "let's talk" ask that ends every page except Let's talk itself (`ask={false}` on `Base`). `FlowDiagram` draws a left-to-right flow that stacks on phones; use it for diagrams instead of ASCII or images. `SystemsJourney` is the machines → teams → teams + AI diagram shared by Home and About. `LatestEntry` is the "latest work" and "latest writing" teaser on Home. `BarChart` draws a titled bar chart from rows of values in HTML (negative values grow left of a zero line; one row or more can be highlighted in the accent color), and `Spectrum` lays out a few options along a scale with one highlighted; both stack on phones and follow the theme. Use them for charts instead of images.
+- `src/components/`: pieces of the shell. `SiteFooter` carries the "Compare notes" ask that ends every page. `FlowDiagram` draws a left-to-right flow that stacks on phones; use it for diagrams instead of ASCII or images. `SystemsJourney` is the machines → teams → teams + AI diagram shared by Home and About. `LatestEntry` is the "latest work" and "latest writing" teaser on Home. `BarChart` draws a titled bar chart from rows of values in HTML (negative values grow left of a zero line; one row or more can be highlighted in the accent color), and `Spectrum` lays out a few options along a scale with one highlighted; both stack on phones and follow the theme. Use them for charts instead of images.
 - `src/assets/`: images that Astro optimizes at build time, such as Ahmed's headshot on About. Use `<Image>` from `astro:assets` for them.
 - `src/assets/agile7-mark.svg`: the seven-leaf Agile 7 mark, extracted as vector paths from the designer's Illustrator file. It draws in `currentColor`; the header colors it with `--brand-teal`. `public/favicon.svg` is the same mark in brand teal. The full AGILE7 wordmark is deliberately not used on the site.
 - `src/styles/global.css`: design tokens and shared styles.
