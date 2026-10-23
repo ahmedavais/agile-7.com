@@ -1,6 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import { shareCardPath } from '../../lib/share-card';
 
 export async function getStaticPaths() {
   const stories = await getCollection('work');
@@ -13,9 +14,10 @@ interface Props {
 
 const { story } = Astro.props;
 const { Content } = await render(story);
+const shareImage = { path: shareCardPath('work', story.id), alt: `${story.data.title}, by Ahmed Avais on agile-7.com` };
 ---
 
-<Base title={story.data.title} description={story.data.summary}>
+<Base title={story.data.title} description={story.data.summary} shareImage={shareImage}>
   <article>
     <header class="post-header">
       <p class="label">work · {story.data.date.getUTCFullYear()}</p>

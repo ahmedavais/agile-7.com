@@ -1,7 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { expect, it } from 'vitest';
-import { descriptionOf } from '../src/lib/page-description';
+import { descriptionOf } from '../src/lib/page-meta';
 
 const DIST = join(import.meta.dirname, '..', 'dist');
 const LINK_PREVIEW_MINIMUM = 100;
