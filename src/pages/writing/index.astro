@@ -5,6 +5,12 @@ import PublishedOn from '../../components/PublishedOn.astro';
 import { newestFirst } from '../../lib/newest-first';
 
 const posts = newestFirst(await getCollection('writing'));
+
+const writtenElsewhere = [
+  { title: 'How Software Teams Can Reduce Cognitive Load', year: '2024', url: 'https://flexion.us/blog/navigating-reducing-cognitive-load/' },
+  { title: "Unlocking Potential: Embracing Empowerment and Decentralization for Managers' Success", year: '2023', url: 'https://info.projectbrilliant.com/blog/unlocking-potential-embracing-empowerment-and-decentralization-for-managers-success' },
+  { title: 'Slime Mold Intelligence, Open Source, and Self-Organization', year: '2022', url: 'https://www.sociocracyforall.org/slime-mold-intelligence-and-sociocracy/', coAuthor: 'Leila Tite' },
+];
 ---
 
 <Base title="Writing" description="Ahmed Avais writes about teams, change and complexity. The newest pieces come from leading engineering teams today, and the 2020 posts from his years as a coach.">
@@ -21,4 +27,11 @@ const posts = newestFirst(await getCollection('writing'));
       </li>
     ))}
   </ol>
+
+  <h2>Writing elsewhere</h2>
+  <ul class="written-elsewhere">
+    {writtenElsewhere.map((piece) => (
+      <li><cite><a href={piece.url}>{piece.title}</a></cite> <span class="written-where">{piece.coAuthor ? `with ${piece.coAuthor}, ` : ''}{piece.year}</span></li>
+    ))}
+  </ul>
 </Base>

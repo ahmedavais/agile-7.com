@@ -157,10 +157,10 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
 
 .prose h3 { font-family: var(--font-mono); font-size: 15px; font-weight: 500; color: var(--accent); margin: 28px 0 0; }
 .prose h3 + p { margin-top: 4px; }
-.talks li { margin-bottom: 6px; }
-.talks cite { font-style: normal; }
-.talks .talk-where { color: var(--muted); }
-.talks .talk-where::before { content: '· ' / ', '; }
+.talks li, .written-elsewhere li { margin-bottom: 6px; }
+.talks cite, .written-elsewhere cite { font-style: normal; }
+.talks .talk-where, .written-elsewhere .written-where { color: var(--muted); }
+.talks .talk-where::before, .written-elsewhere .written-where::before { content: '· ' / ', '; }
 
 .latest { margin-top: 56px; }
 .latest .label { font-family: var(--font-mono); font-size: 13px; color: var(--accent); margin: 0; }
