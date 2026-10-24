@@ -68,7 +68,7 @@ Ahmed writes everything published under his name: posts, newsletter pieces and p
 - From a transcript, agents keep his words and only clean up what speech leaves behind: false starts, repeats and punctuation.
 - Sources are linked inline, where they're used. A Sources list at the end only for pieces that rest on studies with numbers, such as "The AI productivity trap", so a reader checking the numbers finds them in one place. Never list Ahmed's own work there; the body already links it.
 - LinkedIn posts are the exception: agents may draft the bones of a post, meaning its structure and sentences lifted from the piece it announces, which Ahmed wrote. He edits before posting.
-- Video scripts work the same way, but only for the Wednesday videos: a 60 to 90 second walkthrough of an ahmedavais.com tool that Ahmed has already written about in a published piece. Agents may draft the script's bones: its beats, the spoken lines and any on-screen text lifted from that piece, and stage directions such as which control to move. Ahmed edits, then records in his own words. Any other video, such as a talk, is his to write.
+- Video scripts work the same way, but only for the Wednesday videos: a 60 to 90 second walkthrough of an ahmedavais.com tool that Ahmed has already written about in a published piece. Agents may draft the script's bones: its beats, spoken lines that are sentences lifted from that piece, on-screen text lifted from it too, and stage directions such as which control to move. Ahmed edits, then records in his own words. Any other video, such as a talk, is his to write.
 - These rules are a work in progress. Ahmed adjusts them as he learns what works; follow the latest version.
 
 ## Conventions
