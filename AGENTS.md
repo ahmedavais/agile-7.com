@@ -60,7 +60,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 
 ## Writing
 
-Ahmed writes everything published under his name: posts, newsletter pieces and page copy. Agents don't draft that prose. LinkedIn posts work differently (below).
+Ahmed writes everything published under his name: posts, newsletter pieces and page copy. Agents don't draft that prose. LinkedIn posts and video scripts work differently (below).
 
 - Before the writing, agents help him understand the landscape and expand his thinking: research, questions, counterpoints and angles he hasn't considered.
 - Ahmed writes once (or records a voice memo and transcribes it) and edits once.
@@ -68,6 +68,7 @@ Ahmed writes everything published under his name: posts, newsletter pieces and p
 - From a transcript, agents keep his words and only clean up what speech leaves behind: false starts, repeats and punctuation.
 - Sources are linked inline, where they're used. A Sources list at the end only for pieces that rest on studies with numbers, such as "The AI productivity trap", so a reader checking the numbers finds them in one place. Never list Ahmed's own work there; the body already links it.
 - LinkedIn posts are the exception: agents may draft the bones of a post, meaning its structure and sentences lifted from the piece it announces, which Ahmed wrote. He edits before posting.
+- Video scripts work the same way: agents may draft the bones of a script for a short tool walkthrough, meaning its beats, sentences lifted from the published piece it follows and what to show on screen at each beat. Ahmed edits, then records in his own words.
 - These rules are a work in progress. Ahmed adjusts them as he learns what works; follow the latest version.
 
 ## Conventions
