@@ -9,6 +9,7 @@ const OWNED_PLACES = [
   'https://ahmedavais.com/',
   'https://ahmedavais.com/p/team-shape',
   'https://ahmedavais.com/p/stop-starting',
+  'https://ahmedavais.com/p/chance-of-done',
 ];
 const PATIENCE_MS = 15_000;
 
