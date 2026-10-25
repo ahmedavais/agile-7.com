@@ -15,6 +15,7 @@ const stories = newestFirst(await getCollection('work'));
         <a href={`/work/${story.id}`}>
           <h2>{story.data.title}</h2>
         </a>
+        <p class="entry-year">{story.data.date.getUTCFullYear()}</p>
         <p>{story.data.summary}</p>
       </li>
     ))}

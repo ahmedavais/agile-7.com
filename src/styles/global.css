@@ -57,6 +57,7 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
 .site-mark { width: 20px; height: 20px; color: var(--brand-teal); flex: none; }
 .site-nav { display: flex; gap: 20px; }
 .site-nav a:hover, .site-name:hover { color: var(--accent); }
+.site-nav a[aria-current] { color: var(--accent); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
 .site-footer { margin-top: 80px; border-top: 1px solid var(--line); padding: 8px 0 40px; }
 .ask h2 { margin-top: 28px; }
@@ -84,7 +85,7 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
 .elsewhere a { text-decoration: none; }
 .elsewhere a:hover { color: var(--accent); }
 
-.published-on { font-family: var(--font-mono); font-size: 13px; color: var(--accent); }
+.published-on, .entry-year { font-family: var(--font-mono); font-size: 13px; color: var(--accent); }
 
 .entry-list { list-style: none; padding: 0; margin: 0; }
 .entry-list li { border-top: 1px solid var(--line); padding: 8px 0 12px; }
