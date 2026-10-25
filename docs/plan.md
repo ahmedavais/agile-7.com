@@ -4,7 +4,7 @@ The first public version of agile-7.com. Purpose and audience live in [AGENTS.md
 
 ## Pages
 
-- Home: a headline on how Ahmed leads (his teams do the work; his part is the practices, feedback loops and trust), the 25 years of learning how systems behave (machines, teams, AI) in the diagram below it, latest work and writing, and the ask.
+- Home: a headline on how Ahmed leads (his teams do the work; his part is the practices, feedback loops and trust), the machines → teams → teams + AI journey in the diagram below it, latest work and writing, and the ask.
 - About (`/about`): the systems story in prose. Links to LinkedIn for the chronology and a quiet link to ahmedavais.com.
 - Writing (`/writing`, posts at `/writing/<slug>`): the 2020 posts and new ones. agile-7.com stays the canonical home for writing.
 - About also lists the talks given. The Let's talk page (`/contact`) was retired in October 2026 and redirects to About; nobody used it.
