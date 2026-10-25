@@ -1,0 +1,141 @@
+[
+  {
+    "id": "human-systems-dynamics",
+    "title": "Human Systems Dynamics",
+    "venue": "Agile Coach Camp Worldwide",
+    "date": "2026",
+    "featured": true
+  },
+  {
+    "id": "agile-transformation-simulation",
+    "title": "Agile Transformation Simulation",
+    "venue": "AgileIndy Conference",
+    "date": "2023",
+    "featured": true
+  },
+  {
+    "id": "failed-transformation-engagement-lessons-learned",
+    "title": "Failed Transformation Engagement: Lessons Learned",
+    "venue": "AgileIndy Conference",
+    "date": "2023",
+    "featured": true
+  },
+  {
+    "id": "adaptive-action-for-sustainability",
+    "title": "Adaptive Action for Sustainability",
+    "venue": "ODN Summit, Raleigh",
+    "date": "2023",
+    "featured": true
+  },
+  {
+    "id": "sociocracy-training-workshop",
+    "title": "Sociocracy Training Workshop",
+    "venue": "Common Ground EcoVillage",
+    "date": "2023"
+  },
+  {
+    "id": "using-human-systems-dynamics",
+    "title": "Using Human Systems Dynamics",
+    "venue": "Ignite-Agility Meetup",
+    "date": "2021"
+  },
+  {
+    "id": "introduction-to-the-agile-fluency-suite",
+    "title": "Introduction to the Agile Fluency Suite",
+    "venue": "Agile 757",
+    "date": "2021"
+  },
+  {
+    "id": "coaching-clinic",
+    "title": "Coaching clinic",
+    "venue": "Big Apple Scrum Day",
+    "date": "2021"
+  },
+  {
+    "id": "a-leader-s-guide-for-social-responsibility",
+    "title": "A Leader's Guide for Social Responsibility",
+    "venue": "LASTTalk Australia",
+    "date": "2020",
+    "featured": true
+  },
+  {
+    "id": "up-for-adoption-a-mini-workshop-based-on-the-agile-fluency-game",
+    "title": "Up for Adoption: A Mini-Workshop Based on the Agile Fluency Game",
+    "venue": "AgileIndy",
+    "date": "2020"
+  },
+  {
+    "id": "high-performance-teams-panel",
+    "title": "High-Performance Teams (panel)",
+    "venue": "Journyz",
+    "date": "2020"
+  },
+  {
+    "id": "how-leaders-can-address-systemic-changes-with-their-teams-panel",
+    "title": "How Leaders Can Address Systemic Changes with Their Teams (panel)",
+    "venue": "Journyz",
+    "date": "2020"
+  },
+  {
+    "id": "powerful-team-based-coaching",
+    "title": "Powerful Team-Based Coaching",
+    "venue": "Agile Dialogue, Mississauga",
+    "date": "2020"
+  },
+  {
+    "id": "virtual-liberating-structures",
+    "title": "Virtual Liberating Structures",
+    "venue": "RTP Frontier",
+    "url": "https://www.slideshare.net/slideshow/virtual-liberating-structures-rtp-frontier-may-2020/233687176",
+    "date": "2020"
+  },
+  {
+    "id": "the-power-of-inquiry",
+    "title": "The Power of Inquiry",
+    "venue": "Agile Open Northwest, Seattle",
+    "url": "/writing/the-power-of-inquiry",
+    "date": "2020"
+  },
+  {
+    "id": "sessions-for-agile-coaches",
+    "title": "Sessions for agile coaches",
+    "venue": "Dalian, China",
+    "date": "2019"
+  },
+  {
+    "id": "using-the-harada-method-to-develop-people",
+    "title": "Using the Harada Method to Develop People",
+    "venue": "TriAgile, Raleigh",
+    "url": "https://www.slideshare.net/slideshow/using-the-harada-method-to-develop-people/139352189",
+    "date": "2019",
+    "featured": true
+  },
+  {
+    "id": "custom-tailored-agility",
+    "title": "Custom-Tailored Agility",
+    "venue": "Agile Leadership Network RTP",
+    "url": "https://www.slideshare.net/slideshow/customtailored-agility-with-the-agile-fluency-model-137399132/137399132",
+    "date": "2019"
+  },
+  {
+    "id": "deliberate-practice-myth-magic-and-mindfulness",
+    "title": "Deliberate Practice: Myth, Magic, and Mindfulness",
+    "venue": "Agile Cincy",
+    "url": "https://www.slideshare.net/slideshow/deliberate-practice-myth-magic-and-mindfulness/93618888",
+    "date": "2018"
+  },
+  {
+    "id": "design-thinking-in-practice",
+    "title": "Design Thinking in Practice",
+    "venue": "Fitch Ratings",
+    "url": "https://www.slideshare.net/slideshow/design-thinking-in-practice-88240786/88240786",
+    "date": "2018"
+  },
+  {
+    "id": "the-numbers-game",
+    "title": "The Numbers Game",
+    "venue": "Agile Indy",
+    "url": "https://www.slideshare.net/slideshow/the-numbers-game-78856239/78856239",
+    "date": "2017"
+  }
+]

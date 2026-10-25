@@ -1,5 +1,5 @@
 import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { file, glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const writing = defineCollection({
@@ -21,4 +21,15 @@ const work = defineCollection({
   }),
 });
 
-export const collections = { writing, work };
+const talks = defineCollection({
+  loader: file('src/content/talks.json'),
+  schema: z.object({
+    title: z.string(),
+    venue: z.string(),
+    date: z.coerce.date(),
+    url: z.string().optional(),
+    featured: z.boolean().optional(),
+  }),
+});
+
+export const collections = { writing, work, talks };

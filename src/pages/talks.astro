@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import TalkList from '../components/TalkList.astro';
+import { newestFirst } from '../lib/newest-first';
+
+const talks = newestFirst(await getCollection('talks'));
+---
+
+<Base title="Talks and sessions" description="Every talk, workshop and panel Ahmed Avais has given since 2017, on teams, change, coaching and complex systems, with slides where they exist.">
+  <article class="prose">
+    <h1>Talks and sessions</h1>
+    <TalkList talks={talks} />
+  </article>
+</Base>

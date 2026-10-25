@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  talks: CollectionEntry<'talks'>[];
+}
+
+const { talks } = Astro.props;
+---
+
+<ul class="talks">
+  {talks.map((talk) => (
+    <li><cite>{talk.data.url ? <a href={talk.data.url}>{talk.data.title}</a> : talk.data.title}</cite> <span class="talk-where">{talk.data.venue}, {talk.data.date.getUTCFullYear()}</span></li>
+  ))}
+</ul>
