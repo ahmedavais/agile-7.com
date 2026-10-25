@@ -1,5 +1,14 @@
 ---
 import Mark from '../assets/agile7-mark.svg';
+import { navCurrent } from '../lib/nav-current';
+import { publicPath } from '../lib/public-path';
+
+const sections = [
+  { path: '/work', name: 'work' },
+  { path: '/about', name: 'about' },
+  { path: '/writing', name: 'writing' },
+];
+const page = publicPath(Astro.url.pathname);
 ---
 
 <header class="site-header">
@@ -8,8 +17,6 @@ import Mark from '../assets/agile7-mark.svg';
     agile-7
   </a>
   <nav class="site-nav" aria-label="Main">
-    <a href="/work">work</a>
-    <a href="/about">about</a>
-    <a href="/writing">writing</a>
+    {sections.map((section) => <a href={section.path} aria-current={navCurrent(section.path, page)}>{section.name}</a>)}
   </nav>
 </header>
