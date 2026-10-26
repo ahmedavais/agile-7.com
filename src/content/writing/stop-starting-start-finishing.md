@@ -2,7 +2,7 @@
 title: Stop starting, start finishing
 summary: Two teams, same people, same work. Watch what happens when a team is working on everything and finishing very little.
 date: 2026-10-18
-canonical: https://ahmedavais.substack.com/p/stop-starting-start-finishing
+canonical: https://dynamicalchange.com/p/stop-starting-start-finishing
 ---
 
 This probably sounds familiar. You have three or four things going on, and product has a long list of ideas waiting on engineering. Meanwhile, compliance vulnerabilities need fixing right away, someone has to cover on-call for customer calls, and hey, the week-long DR exercise is coming up too. Somewhere in there, you want to give folks time to be creative. And still someone asks: why can't you all do more?
@@ -54,4 +54,4 @@ If you'd like to try this with your own team, the race makes a nice opener for a
 
 I'd like to hear what you see, in the race or on your own team.
 
-This piece first went out in my newsletter, Dynamical Change. [Subscribe](https://ahmedavais.substack.com) to get the next one in your inbox.
+This piece first went out in my newsletter, Dynamical Change. [Subscribe](https://dynamicalchange.com) to get the next one in your inbox.

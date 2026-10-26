@@ -2,7 +2,7 @@
 title: What shape is your team in?
 summary: Human Systems Dynamics' CDE model explains why a team's problems keep coming back, and three questions in a free tool show which of seven shapes your team is in.
 date: 2026-10-12
-canonical: https://ahmedavais.substack.com/p/what-shape-is-your-team-in
+canonical: https://dynamicalchange.com/p/what-shape-is-your-team-in
 ---
 
 You’ve sat through the retro where everyone agrees the team has a communication problem. Someone proposes a new channel, someone else a weekly sync. A month later the team has both, and the same problem.
@@ -55,4 +55,4 @@ Then pick one condition and make one small move. Narrow the container by saying 
 
 Which shape is your team in right now? I’d like to hear what you found.
 
-This piece first went out in my newsletter, Dynamical Change. [Subscribe](https://ahmedavais.substack.com) to get the next one in your inbox.
+This piece first went out in my newsletter, Dynamical Change. [Subscribe](https://dynamicalchange.com) to get the next one in your inbox.
