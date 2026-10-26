@@ -28,6 +28,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 - Watch production: `.github/workflows/watch-production.yml`, with steps shared from [karkhana](https://github.com/ahmedavais/karkhana), runs the live checks in `sensors/live/` after every deploy, daily and on demand. A failed run is the alarm (GitHub emails it); there's no issue tracker in the loop.
 - Same setup as ahmedavais.com. Follow its patterns unless there's a reason not to.
 - ahmedavais.com (`../ahmedavais.com`) has its own repo and its own session. Read it for patterns, but never change it from here; hand anything found there to Ahmed as a note to paste into that session.
+- ahmedavais.com links to `/writing` from its header and to `/writing/what-shape-is-your-team-in` from its team-shape page, and its production watch (`OWNED_PLACES` in its `sensors/live/production.test.ts`) fails if either stops answering 200 after redirects. Keep both URLs; if one ever has to move, add a 301 in `public/_redirects` and hand Ahmed a note for that session.
 
 ## Commands
 
