@@ -48,6 +48,7 @@ A systems notebook with warmth. Reference mockup: `playground/design/blend.html`
 - [x] Refresh the "What shape is your team in?" screenshots once the tool says "Groupthink"
 - [x] Gather the rest of Ahmed's talks
 - [ ] Watch the guest recordings again on YouTube and add the keepers to Talks and sessions with their links (candidates in private notes)
+- [ ] Link the Powerful Team-Based Coaching deck from Ahmed's own SlideShare upload once SlideShare uploads are back (down since 2026-10-02); the only copy online now is someone else's upload
 - [ ] Revise the older talk decks with what Ahmed knows now (his own pace; originals are listed in private notes)
 - [x] Check every internal link and redirect target in the built site
 - [x] Watch production after each deploy and daily
