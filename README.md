@@ -1,5 +1,8 @@
 # agile-7.com
 
+[![CI / Deploy](https://github.com/ahmedavais/agile-7.com/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ahmedavais/agile-7.com/actions/workflows/ci.yml)
+[![Watch production](https://github.com/ahmedavais/agile-7.com/actions/workflows/watch-production.yml/badge.svg?branch=main)](https://github.com/ahmedavais/agile-7.com/actions/workflows/watch-production.yml)
+
 Ahmed Avais's site for Agile 7.
 
 ```bash
