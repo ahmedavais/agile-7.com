@@ -28,22 +28,10 @@
     "featured": true
   },
   {
-    "id": "sociocracy-training-workshop",
-    "title": "Sociocracy Training Workshop",
-    "venue": "Common Ground EcoVillage",
-    "date": "2023"
-  },
-  {
     "id": "scaling-agile-with-many-teams-and-large-organizations",
     "title": "Scaling Agile with Many Teams and Large Organizations",
     "venue": "NCPMI Agile Community of Practice",
     "date": "2023"
-  },
-  {
-    "id": "power-dynamics",
-    "title": "Power Dynamics",
-    "venue": "Common Ground EcoVillage",
-    "date": "2022"
   },
   {
     "id": "using-human-systems-dynamics",
