@@ -76,6 +76,7 @@ Ahmed writes everything published under his name: posts, newsletter pieces and p
 
 ## Conventions
 
+- Ahmed's by-hand steps (Substack and platform settings, his own writing, posting and scheduling) live in one list for all his repos: `docs/manual-steps.md` in the private dynamicalchange repo (`~/Documents/Development/dynamicalchange`). Add them there and tick them off there when he says they're done, not in this repo or only in a reply. Check the list before adding a step.
 - The name: "Agile 7" in prose, page titles and anywhere it's read as a name (the company is Agile 7, Inc). "agile-7" only as the header wordmark and in the domain. Never "Agile-7".
 - Write in American English: organization, center, recognize, practiced, judgment. The audience is American. `npm run spell` (cspell, en-US, `cspell.json`) fails on British spellings and unknown words; add real names and terms to `words`, and British forms the en-US dictionary still accepts to `flagWords`.
 - Pages work at 375px wide and respect `prefers-color-scheme`.
