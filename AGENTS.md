@@ -20,6 +20,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 
 - Astro 7, fully static output (`dist/`).
 - Hosted as Cloudflare Worker static assets (`wrangler.jsonc`). No server code.
+- Registrar, DNS, mail and the zone settings shared with ahmedavais.com: `domains.md` in the private dev-scripts repo (`~/Documents/Development/dev-scripts`).
 - CI/CD: `.github/workflows/ci.yml`. PRs get a preview URL, `main` deploys to production.
 - Duplication: the `duplication` job in `.github/workflows/ci.yml`, shared from [karkhana](https://github.com/ahmedavais/karkhana), fails when a change adds code duplicated elsewhere in the repo, tests included. `.jscpd.json` skips `package-lock.json`.
 - Habit Hooks: `.habit-hooks/config.toml` opts this repo into Ahmed's global Claude Code Stop hook. When Claude stops, it checks what the branch changed for structural smells and hands Claude a coaching guide for each. The limits come from `eslint.config.js`; knip, configured in `knip.json` with `sensors/` as entry points, finds unused exports and dependencies. It needs `npm ci`, since knip and ts-morph are dev dependencies. Main was clean when it was adopted (2026-10-18), apart from one long test function. The config also routes karkhana's two test-file length rules: a long `it` gets the usual oversized-function guide, and a long `describe` gets karkhana's module guide through the symlink in `.habit-hooks/generic/guides/`.
