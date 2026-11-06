@@ -63,17 +63,7 @@ agile-7.com shows engineering leaders what Ahmed has done and can do: build heal
 
 ## Writing
 
-Ahmed writes everything published under his name: posts, newsletter pieces and page copy. Agents don't draft that prose, except for pieces built from an interview with him. LinkedIn posts and video scripts work differently too (below).
-
-- Before the writing, agents help him understand the landscape and expand his thinking: research, questions, counterpoints and angles he hasn't considered.
-- Ahmed writes once (or records a voice memo and transcribes it) and edits once.
-- Interview-based pieces: an agent interviews Ahmed one question at a time and keeps his answers in his words in the piece's brief (`docs/newsletter/<slug>-brief.md` in the dynamicalchange repo, `~/Documents/Development/dynamicalchange`, with the piece's draft, video script bones and images; the content calendar is `docs/linkedin-drafts.md` there). Agents may then draft the piece. His stories stay in his words; agents write what connects them, such as explaining a tool and tying a story to it. Ahmed picks the closing question and edits before publishing. "Trust has neighbors" (November 2026) was the first.
-- After the writing, agents check grammar, spelling and American English, and check facts against their source, such as the tool or the case notes. They fix a sentence; they don't replace it.
-- From a transcript, agents keep his words and only clean up what speech leaves behind: false starts, repeats and punctuation.
-- Sources are linked inline, where they're used. A Sources list at the end only for pieces that rest on studies with numbers, such as "The AI productivity trap", so a reader checking the numbers finds them in one place. Never list Ahmed's own work there; the body already links it.
-- LinkedIn posts are the exception: agents may draft the bones of a post, meaning its structure and sentences lifted from the piece it announces, which Ahmed wrote. He edits before posting.
-- Video scripts work the same way, but only for the Wednesday videos: a 60 to 90 second walkthrough of an ahmedavais.com tool that Ahmed has already written about in a published piece. Agents may draft the script's bones: its beats, spoken lines that are sentences lifted from Ahmed's newest wording of the same idea (a LinkedIn post he rewrote, for example) or else from that piece, on-screen text lifted the same way, and stage directions such as which control to move. A line that reads as written and has no spoken version of his is marked for him to say his way, not paraphrased. Ahmed edits, then records in his own words. Any other video, such as a talk, is his to write.
-- These rules are a work in progress. Ahmed adjusts them as he learns what works; follow the latest version.
+What agents write and what Ahmed writes is one rule for all his sites: "What agents write and what Ahmed writes" in `docs/brand.md` in the dynamicalchange repo (`~/Documents/Development/dynamicalchange`), which the `dynamical-change-brand` skill points to.
 
 ## Conventions
 
