@@ -1,12 +1,13 @@
 ---
 title: Not the coach for us
-summary: A CIO told my manager I wasn't the right coach for his team. Changing who I coached, and keeping him in the loop, turned that setback into four quarters of rising team health and engagement.
+summary: A CIO told my manager I wasn't the right coach for his team. Changing who I coached, and keeping him in the loop, turned that setback into a year where stable teams replaced committees and every area we surveyed improved.
 date: 2022-12-01
 ---
 
 import FlowDiagram from '../../components/FlowDiagram.astro';
+import TrendChart from '../../components/TrendChart.astro';
 
-In 2022 I worked as an enterprise coach with a healthcare organization's IT department of about 300 people. The organization wanted a more engaged workforce, less administrative burden on its clinicians, and digital services, like self-service appointments, that could hold their own against competitors. Agile was new to them.
+In 2022 I worked as an enterprise coach with a healthcare organization's IT department of about 300 people. The organization wanted a more engaged workforce, less administrative burden on its clinicians, and digital services, like self-service appointments, that could hold their own against competitors. Agile was new to them. I led the transformation for the whole year.
 
 <FlowDiagram
   title="How the engagement unfolded"
@@ -15,7 +16,7 @@ In 2022 I worked as an enterprise coach with a healthcare organization's IT depa
     { label: 'setback', detail: '"not the coach for us"' },
     { label: 'change agents', detail: 'volunteers own the change' },
     { label: 'pilot', detail: 'visible backlogs' },
-    { label: 'result', detail: 'four quarters of gains' },
+    { label: 'result', detail: 'every surveyed area up' },
   ]}
 />
 
@@ -27,21 +28,51 @@ At the same time, I launched a transformation team of volunteer change agents fr
 
 ## The setback
 
-A few months in, the CIO went to my manager and said I wasn't the coach for them. I was taken aback. The obvious moves were to push back and prove him wrong, or to quietly step away, and neither would have helped the organization.
+A few months in, the CIO went to my manager and said I wasn't the coach for them. The situation took me by surprise. The obvious moves were to push back and prove him wrong, or to step away quietly, and neither would have helped the organization.
 
 So I changed where I put my energy. I spent more of my time with the transformation team, all of whom worked in the CIO's organization and one of whom reported to him directly, and I kept the CIO informed about what they were doing and learning. The change would now travel through his own people.
+
+## Software that serves clinicians
+
+The part I'm proudest of is working in a highly complex healthcare space with doctors and nurses, building relationships and making progress that reaches real people as smoother care.
+
+Their curiosity and understanding of complexity helped pave a path for software systems that support them. The biggest thing was not making clinicians subservient to software that wants inboxes cleared. That software can become rigid under the rules of the big EHR vendors, almost as if they dictate how brilliant people in medicine should run hospitals. The burden lifted when the software served the clinicians instead. We documented a ton of pain points and tackled them systematically with everything we learned from agile: planning, product thinking, Lean Coffee style sessions and, more than anything, structured retrospectives.
 
 ## A small pilot on a big belief
 
 One belief shaped many of the department's habits: the CIO felt that without time tracking and resource allocation, accountability and ownership would disappear. I didn't argue with him. I asked what time tracking had actually given his teams and what it had cost them, and I shared how other organizations had moved to visible backlogs, where everyone can see the work, its priority and its progress.
 
-That conversation led him to sponsor a pilot with guardrails. One of his vice presidents already wanted to move away from time tracking, so a group of managers in that area tried visible backlogs while I coached them through the transition.
+That conversation led him to sponsor a pilot with guardrails. One of his vice presidents already wanted to move away from time tracking, so a group of managers in that area tried visible backlogs while I coached them through the transition. It went really well. Time tracking was a well-known pain, and we made the move smooth through tools like ServiceNow, processes and the right people.
 
 ## Six months later
 
-Over the following six months, the transformation team became the engine of the change. The CIO came back to say how well the team was working and how much value the coaching had created, and the leader who had asked for a different coach was now praising the work.
+Over the following six months, the transformation team became the engine of the change. The CIO started hearing positive feedback from his own trusted people who were embedded with me on the team. He came back to say how well the team was working and how much value the coaching had created, and the leader who had asked for a different coach was praising the work. By the fall, he was telling the whole department that the change was gaining ground and taking root in places.
 
-The numbers backed him up. We surveyed team health and engagement every quarter, and over four quarters every measure trended up. Some of the change spread in ways nobody planned: Lean Coffee, which I had introduced for our own sessions, became the way managers preferred to run their meetings.
+Leaders started asking questions a little differently. They brought their asks to a team, as a backlog to prioritize and sequence, and kept their say in guidance and in what's important. In the past it would have been a million conversations with individual contributors: no shared work, no idea of teamwork in the truest sense. About 40 leaders went through a second round of the two-day leadership development training I ran, with an optional six-week practice program in small cohorts.
+
+## Fewer committees, more teams
+
+The biggest change was how many committees we no longer needed. In the past there was a temporary subcommittee for everything under the sun, spun up just because things needed to get done. Those dwindled. Real, stable teams with backlogs took on the work.
+
+The numbers backed it up. My firm surveyed the department just before I arrived, then again in April, August and December, four times that year. All six areas the survey measured rose every time.
+
+<TrendChart
+  title="Every area rose in every round"
+  note="Average agreement on a 1 to 6 scale; each panel shows 3.5 to 5"
+  source="Department-wide survey, 2022: 196, 110, 195 and 216 responses"
+  rounds={['Jan', 'Apr', 'Aug', 'Dec']}
+  scale={{ from: 3.5, to: 5 }}
+  trends={[
+    { label: 'Culture', values: [3.98, 4.14, 4.44, 4.54] },
+    { label: 'Organizational change', values: [3.79, 4.17, 4.3, 4.45] },
+    { label: 'Business outcomes', values: [3.89, 4.17, 4.32, 4.42] },
+    { label: 'Planning', values: [3.84, 4.17, 4.3, 4.42] },
+    { label: 'Customer focus', values: [4.37, 4.56, 4.65, 4.66] },
+    { label: 'Delivery maturity', values: [3.78, 4.02, 4.22, 4.27] },
+  ]}
+/>
+
+The biggest gains were in understanding why the change was needed and how it would help, and in feeling involved in what happened across the department. The share of people on a team using Scrum or Kanban went from 15% to 38%. Being able to focus on one thing at a time stayed the lowest score all year, even as it rose. Some of the change spread in ways nobody planned: Lean Coffee, which I had introduced for our own sessions, became the way managers preferred to run their meetings.
 
 ## What I took from it
 
