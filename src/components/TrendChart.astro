@@ -1,0 +1,76 @@
+---
+import { trendLayout, type Scale } from '../lib/trend-layout';
+
+interface Trend {
+  label: string;
+  values: number[];
+}
+
+interface Props {
+  title: string;
+  note: string;
+  source: string;
+  rounds: string[];
+  scale: Scale;
+  trends: Trend[];
+}
+
+const { title, note, source, rounds, scale, trends } = Astro.props;
+const shown = (value: number) => value.toFixed(2);
+const panels = trends.map((trend) => {
+  const points = trendLayout(trend.values, scale);
+  return {
+    ...trend,
+    points,
+    line: points.map((point) => `${point.x},${point.y}`).join(' '),
+    first: trend.values.at(0),
+    last: trend.values.at(-1),
+  };
+});
+---
+
+<figure class="chart trend-chart">
+  <figcaption>
+    <span class="chart-title">{title}</span>
+    <span class="chart-note">{note}</span>
+  </figcaption>
+  <ul>
+    {panels.map((panel) => (
+      <li>
+        <span class="trend-label">{panel.label}</span>
+        <span class="trend-plot" aria-hidden="true">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polyline points={panel.line} vector-effect="non-scaling-stroke" />
+          </svg>
+          {panel.points.map((point, index) => (
+            <span class="trend-dot" style={`left: ${point.x}%; top: ${point.y}%`} title={`${rounds.at(index)}: ${shown(panel.values.at(index) ?? 0)}`} />
+          ))}
+        </span>
+        <span class="trend-ends">
+          <span>{rounds.at(0)} {panel.first !== undefined && shown(panel.first)}</span>
+          <span>{rounds.at(-1)} {panel.last !== undefined && shown(panel.last)}</span>
+        </span>
+      </li>
+    ))}
+  </ul>
+  <details class="trend-table">
+    <summary>Every round</summary>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Area</th>
+          {rounds.map((round) => <th scope="col">{round}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {trends.map((trend) => (
+          <tr>
+            <th scope="row">{trend.label}</th>
+            {trend.values.map((value) => <td>{shown(value)}</td>)}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </details>
+  <p class="chart-source">{source}</p>
+</figure>
