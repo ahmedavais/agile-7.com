@@ -12,9 +12,10 @@ const OWNED_PLACES = [
   'https://ahmedavais.com/p/chance-of-done',
 ];
 const PATIENCE_MS = 15_000;
+const WITHOUT_FOLLOWING: RequestInit = { redirect: 'manual' };
 
-async function answerFrom(url: string, redirect: RequestRedirect = 'follow') {
-  const response = await fetch(url, { redirect, signal: AbortSignal.timeout(PATIENCE_MS) });
+async function answerFrom(url: string, request: RequestInit = {}) {
+  const response = await fetch(url, { ...request, signal: AbortSignal.timeout(PATIENCE_MS) });
   return { status: response.status, body: await response.text(), location: response.headers.get('location') };
 }
 
@@ -30,7 +31,7 @@ describe(`production at ${SITE}`, () => {
 
   it('sends every old WordPress URL to its new home', async () => {
     const rules = redirectRules(readFileSync(join(import.meta.dirname, '..', '..', 'public', '_redirects'), 'utf8'));
-    const answers = await Promise.all(rules.map(async (rule) => ({ rule, answer: await answerFrom(`${SITE}${rule.from}`, 'manual') })));
+    const answers = await Promise.all(rules.map(async (rule) => ({ rule, answer: await answerFrom(`${SITE}${rule.from}`, WITHOUT_FOLLOWING) })));
     const wrong = answers
       .filter(({ rule, answer }) => answer.status !== 301 || new URL(answer.location ?? '', SITE).pathname !== rule.to)
       .map(({ rule, answer }) => `${rule.from} → ${answer.status} ${answer.location}`);
