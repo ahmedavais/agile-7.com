@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { describe, expect, it } from 'vitest';
-import { isSitePage, pagesInSitemap } from '../../src/lib/live-checks';
+import { assert, describe, expect, it } from 'vitest';
+import { analyticsTokenIn, isAcceptedReport, isSitePage, pagesInSitemap, visitReport } from '../../src/lib/live-checks';
 import { redirectRules } from '../../src/lib/site-links';
 
 const SITE = process.env.SITE_URL ?? 'https://agile-7.com';
@@ -11,10 +11,18 @@ const OWNED_PLACES = [
   'https://ahmedavais.com/p/stop-starting',
   'https://ahmedavais.com/p/chance-of-done',
 ];
+const WATCH_VISIT = `${SITE}/watch-production`;
 const PATIENCE_MS = 15_000;
+const WITHOUT_FOLLOWING: RequestInit = { redirect: 'manual' };
+const AS_A_BROWSER_ASKS: RequestInit = { headers: { accept: 'text/html' } };
+const AS_THE_BEACON_REPORTS = (report: string): RequestInit => ({
+  method: 'POST',
+  headers: { origin: new URL(SITE).origin, 'content-type': 'application/json' },
+  body: report,
+});
 
-async function answerFrom(url: string, redirect: RequestRedirect = 'follow') {
-  const response = await fetch(url, { redirect, signal: AbortSignal.timeout(PATIENCE_MS) });
+async function answerFrom(url: string, request: RequestInit = {}) {
+  const response = await fetch(url, { ...request, signal: AbortSignal.timeout(PATIENCE_MS) });
   return { status: response.status, body: await response.text(), location: response.headers.get('location') };
 }
 
@@ -28,9 +36,18 @@ describe(`production at ${SITE}`, () => {
     expect(broken).toEqual([]);
   });
 
+  it('counts visits in Web Analytics', async () => {
+    const token = analyticsTokenIn((await answerFrom(`${SITE}/`, AS_A_BROWSER_ASKS)).body);
+    assert(token, 'The home page carries no Web Analytics beacon: check Web Analytics is on for the site in the Cloudflare dashboard');
+
+    const report = await answerFrom(`${SITE}/cdn-cgi/rum`, AS_THE_BEACON_REPORTS(visitReport(token, WATCH_VISIT)));
+
+    expect(isAcceptedReport(report.status), `/cdn-cgi/rum answered ${report.status}: check no Cloudflare rule covers /cdn-cgi/`).toBe(true);
+  });
+
   it('sends every old WordPress URL to its new home', async () => {
     const rules = redirectRules(readFileSync(join(import.meta.dirname, '..', '..', 'public', '_redirects'), 'utf8'));
-    const answers = await Promise.all(rules.map(async (rule) => ({ rule, answer: await answerFrom(`${SITE}${rule.from}`, 'manual') })));
+    const answers = await Promise.all(rules.map(async (rule) => ({ rule, answer: await answerFrom(`${SITE}${rule.from}`, WITHOUT_FOLLOWING) })));
     const wrong = answers
       .filter(({ rule, answer }) => answer.status !== 301 || new URL(answer.location ?? '', SITE).pathname !== rule.to)
       .map(({ rule, answer }) => `${rule.from} → ${answer.status} ${answer.location}`);
