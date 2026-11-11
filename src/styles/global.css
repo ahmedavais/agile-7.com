@@ -139,11 +139,6 @@ code, pre { font-family: var(--font-mono); font-size: 0.85em; }
 .trend-plot polyline { fill: none; stroke: var(--accent); stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; }
 .trend-dot { position: absolute; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 2px var(--diagram-bg); }
 .trend-ends { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
-.trend-table { margin-top: 16px; font-size: 13px; }
-.trend-table summary { cursor: pointer; color: var(--accent); }
-.trend-table table { margin-top: 8px; width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-.trend-table th, .trend-table td { padding: 4px 6px; text-align: right; border-bottom: 1px solid var(--line); }
-.trend-table th[scope="row"], .trend-table thead th:first-child { text-align: left; }
 .spectrum ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
 .spectrum li { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; }
 .spectrum li.highlight { border: 2px solid var(--accent); }

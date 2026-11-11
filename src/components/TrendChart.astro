@@ -42,8 +42,8 @@ const panels = trends.map((trend) => {
           <svg viewBox="0 0 100 100" preserveAspectRatio="none">
             <polyline points={panel.line} vector-effect="non-scaling-stroke" />
           </svg>
-          {panel.points.map((point, index) => (
-            <span class="trend-dot" style={`left: ${point.x}%; top: ${point.y}%`} title={`${rounds.at(index)}: ${shown(panel.values.at(index) ?? 0)}`} />
+          {panel.points.map((point) => (
+            <span class="trend-dot" style={`left: ${point.x}%; top: ${point.y}%`} />
           ))}
         </span>
         <span class="trend-ends">
@@ -53,24 +53,5 @@ const panels = trends.map((trend) => {
       </li>
     ))}
   </ul>
-  <details class="trend-table">
-    <summary>Every round</summary>
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">Area</th>
-          {rounds.map((round) => <th scope="col">{round}</th>)}
-        </tr>
-      </thead>
-      <tbody>
-        {trends.map((trend) => (
-          <tr>
-            <th scope="row">{trend.label}</th>
-            {trend.values.map((value) => <td>{shown(value)}</td>)}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </details>
   <p class="chart-source">{source}</p>
 </figure>
