@@ -1,0 +1,29 @@
+name: Share card stress (temporary)
+on: pull_request
+jobs:
+  stress:
+    strategy:
+      fail-fast: false
+      matrix:
+        code: [main, fix]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - if: matrix.code == 'main'
+        run: |
+          git show origin/main:src/lib/share-card.ts > src/lib/share-card.ts
+          git show origin/main:src/lib/share-card.test.ts > src/lib/share-card.test.ts
+      - name: Run the card test in 40 fresh processes
+        run: |
+          for i in $(seq 40); do
+            npx vitest run src/lib/share-card.test.ts -t "LinkedIn" --reporter=json --outputFile=run.json > /dev/null || echo "run $i failed"
+            node -e "const r=require('./run.json');const t=r.testResults[0].assertionResults.find(a=>a.title.includes('LinkedIn'));console.log(t.status, Math.round(t.duration))" | tee -a durations.txt
+          done
+          sort -k2 -n durations.txt | awk '{d[NR]=$2; if($1!="passed")f++} END {print "runs", NR, "failed", f+0, "min", d[1], "median", d[int((NR+1)/2)], "max", d[NR]}' | tee -a "$GITHUB_STEP_SUMMARY"
