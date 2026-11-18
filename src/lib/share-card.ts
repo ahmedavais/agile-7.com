@@ -14,6 +14,7 @@ const require = createRequire(import.meta.url);
 const LONGEST_LARGE_TITLE = 60;
 const WIDTH = 1200;
 const HEIGHT = 630;
+const TEXT_ALREADY_DRAWN_AS_PATHS = { font: { loadSystemFonts: false } };
 const COLORS = { background: '#fbfaf7', text: '#1f1d1a', muted: '#57524a', accent: '#277773', brandTeal: '#43c1bb' };
 
 export function shareCardPath(section: Section, slug: string): string {
@@ -22,7 +23,11 @@ export function shareCardPath(section: Section, slug: string): string {
 
 export async function renderShareCard(card: ShareCard): Promise<Uint8Array<ArrayBuffer>> {
   const svg = await satori(cardLayout(card, await brandMark()), { width: WIDTH, height: HEIGHT, fonts: await cardFonts() });
-  return new Uint8Array(new Resvg(svg).render().asPng());
+  return pngFrom(svg);
+}
+
+export function pngFrom(svg: string): Uint8Array<ArrayBuffer> {
+  return new Uint8Array(new Resvg(svg, TEXT_ALREADY_DRAWN_AS_PATHS).render().asPng());
 }
 
 function box(style: Record<string, string | number>, children: unknown) {

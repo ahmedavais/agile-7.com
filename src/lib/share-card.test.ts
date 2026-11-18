@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { renderShareCard, shareCardPath, titleSize } from './share-card';
+import { pngFrom, renderShareCard, shareCardPath, titleSize } from './share-card';
 
 describe('shareCardPath', () => {
   it('puts a post’s card under its section and slug', () => {
@@ -19,6 +19,16 @@ describe('renderShareCard', () => {
     const card = await renderShareCard({ section: 'writing', title: 'The AI productivity trap' });
 
     expect(sizeOf(card)).toEqual({ width: 1200, height: 630 });
+  });
+});
+
+describe('pngFrom', () => {
+  it('draws nothing in a font the machine happens to have, so a card looks the same wherever it’s built', () => {
+    const canvas = (content: string) => `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50">${content}</svg>`;
+
+    const withMachineFontText = pngFrom(canvas('<text x="10" y="40" font-family="sans-serif" font-size="32">agile-7</text>'));
+
+    expect(withMachineFontText).toEqual(pngFrom(canvas('')));
   });
 });
 
