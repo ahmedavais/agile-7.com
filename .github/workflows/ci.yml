@@ -13,6 +13,9 @@ jobs:
   duplication:
     uses: ahmedavais/karkhana/.github/workflows/duplication.yml@main
 
+  downgrade-guard:
+    uses: ahmedavais/karkhana/.github/workflows/downgrade-guard.yml@main
+
   verify:
     runs-on: ubuntu-latest
     steps:
@@ -87,7 +90,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
   failed-update-alarm:
-    needs: [duplication, verify, preview]
+    needs: [duplication, downgrade-guard, verify, preview]
     if: failure()
     permissions:
       pull-requests: write
